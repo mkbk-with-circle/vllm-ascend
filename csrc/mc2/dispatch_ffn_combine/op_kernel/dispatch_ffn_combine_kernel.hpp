@@ -12,6 +12,7 @@
 #define DISPATCH_FFN_COMBINE_KERNEL_HPP
 
 #include "kernel_operator.h"
+#include "dispatch_ffn_combine_profile.h"
 
 #include "catlass/catlass.hpp"
 #include "catlass/arch/cross_core_sync.hpp"
@@ -139,6 +140,7 @@ public:
         uint32_t epilogueCoreNum;
         uint32_t epilogueGranularity;
         optiling::MoeInitRoutingQuantV2TilingData moeInitRoutingQuantV2TilingData;
+        uint64_t profileGmOffset;
         //--------------
 
         // Methods
@@ -162,7 +164,8 @@ public:
             GM_ADDR expertTokensBeforeCapacity_, GM_ADDR probs_,
             GM_ADDR ptrWorkspace_, GM_ADDR gmExpertTokenNums_, int32_t ubMoveNum_,
             GM_ADDR ptrXActiveMask_,
-            optiling::MoeInitRoutingQuantV2TilingData moeInitRoutingQuantV2TilingData_
+            optiling::MoeInitRoutingQuantV2TilingData moeInitRoutingQuantV2TilingData_,
+            uint64_t profileGmOffset_ = 0
         ) : problemShape(problemShape_),
             EP(EP_), listLen(listLen_), expertPerRank(expertPerRank_), maxOutputSize(maxOutputSize_),
             rank(rank_), rankSize(rankSize_), topK(topK_),
@@ -179,7 +182,8 @@ public:
             expertTokensBeforeCapacity(expertTokensBeforeCapacity_), probs(probs_),
             ptrWorkspace(ptrWorkspace_), ptrExpertTokenNums(gmExpertTokenNums_), ubMoveNum(ubMoveNum_),
             ptrXActiveMask(ptrXActiveMask_),
-            moeInitRoutingQuantV2TilingData(moeInitRoutingQuantV2TilingData_)
+            moeInitRoutingQuantV2TilingData(moeInitRoutingQuantV2TilingData_),
+            profileGmOffset(profileGmOffset_)
         {
         }
     };
@@ -251,6 +255,17 @@ private:
         if (params.problemShape.m() * params.topK <= 4096) {
             isCombineV1 = false;
         }
+
+#if DISPATCH_FFN_COMBINE_PROFILE
+        profileStageBuf_ = nullptr;
+        if (params.profileGmOffset != 0) {
+            profileStageBuf_ =
+                reinterpret_cast<__gm__ int32_t*>(params.ptrWorkspace + params.profileGmOffset);
+            if (ASCEND_IS_AIV && DffcProfileIsAivWriter(coreIdx)) {
+                DffcProfileInit(profileStageBuf_);
+            }
+        }
+#endif
     }
 
     template<typename T>
@@ -468,6 +483,7 @@ private:
     // 与 AIV 通过 syncgmmIdx 握手：AIV Pull 完一组 token 后 SetFlag，AIC 才能读 gmA 做该组 GEMM。
     CATLASS_DEVICE
     void GMM1(Params const &params){
+        DFFC_PROFILE_STAGE_BEGIN(profileStageBuf_, DFFC_PHASE_GMM1);
         icache_preload(8);
         BlockScheduler blockScheduler;   // 将每组 GEMM 切成 L1Tile 并分配给多 AIC core
         BlockMmad blockMmad(resource);   // 异步 Cube matmul 封装
@@ -579,10 +595,12 @@ private:
         }
         // SYNCFLAGC2V：全部 GMM1 完成（或第二波），通知 AIV SwiGLU
         blockMmad.Finalize(syncLoopIdx + 1, SYNCFLAGC2V);
+        DFFC_PROFILE_STAGE_END(profileStageBuf_, DFFC_PHASE_GMM1);
     }
 
     CATLASS_DEVICE
     void GMM2(Params const &params) {
+        DFFC_PROFILE_STAGE_BEGIN(profileStageBuf_, DFFC_PHASE_GMM2);
         icache_preload(8);
         BlockScheduler blockScheduler;
         BlockMmad blockMmad(resource);
@@ -679,6 +697,7 @@ private:
         if (isCombineV1) {
             blockMmad.Finalize(params.expertPerRank - 1, 0);
         }
+        DFFC_PROFILE_STAGE_END(profileStageBuf_, DFFC_PHASE_GMM2);
     }
 
 
@@ -899,6 +918,7 @@ private:
     // 与 AIC 侧 GMM1/GMM2 通过 SYNCFLAGC2V(AIC→AIV)、SYNCFLAGV2C(AIV→AIC) 及 syncgmmIdx 握手。
     CATLASS_DEVICE
     void DispatchAndCombine(Params const &params) {
+        DFFC_PROFILE_STAGE_BEGIN(profileStageBuf_, DFFC_PHASE_PREP);
         icache_preload(8);
         // peermem 中 tokenPerExpert 矩阵：本 rank 行、各 dst rank 列、各本地 expert 的深度
         int64_t localTokenPerExpertOffset = peermemInfo.offsetPeerTokenPerExpert + tokenPerExpertLayout(params.rank, 0, 0) * sizeof(int32_t);
@@ -955,12 +975,15 @@ private:
         uint16_t syncgmm1Idx = 0;
         AscendC::CrossCoreSetFlag<0x2, PIPE_MTE3>(syncgmm1Idx / CROSS_CORE_FLAG_MAX_SET_COUNT);
         syncgmm1Idx++;
+        AscendC::SyncAll<true>();
+        DFFC_PROFILE_STAGE_END(profileStageBuf_, DFFC_PHASE_PREP);
 
         // dequantSum1/2：两波 SwiGLU epilogue 各自处理的 token 行数（由 epilogueGranularity 切分）
         uint32_t prevGroupSum1 = 0, dequantSum1 = 0, dequantSum2 = 0;
         uint32_t dequantSum = 0;
 
         // --- Phase 3: 按本地 expert 组 Pull（Dispatch 侧，与 AIC GMM1 流水线重叠）---
+        DFFC_PROFILE_STAGE_BEGIN(profileStageBuf_, DFFC_PHASE_DISPATCH);
         icache_preload(8);
         // ping-pang buffer
         AscendC::SetFlag<AscendC::HardEvent::MTE3_MTE2>(EVENT_ID0);
@@ -1026,6 +1049,8 @@ private:
         }
         AscendC::WaitFlag<AscendC::HardEvent::MTE3_MTE2>(EVENT_ID0);
         AscendC::WaitFlag<AscendC::HardEvent::MTE3_MTE2>(EVENT_ID1);
+        AscendC::SyncAll<true>();
+        DFFC_PROFILE_STAGE_END(profileStageBuf_, DFFC_PHASE_DISPATCH);
 
         uint32_t n2 = params.problemShape.k();
 
@@ -1057,6 +1082,7 @@ private:
         BlockEpilogue1 blockEpilogue1(resource, n);
 
         // --- Phase 4: 第一波 SwiGLU（等 AIC GMM1 第一波 via SYNCFLAGC2V）---
+        DFFC_PROFILE_STAGE_BEGIN(profileStageBuf_, DFFC_PHASE_SWIGLU);
         AscendC::CrossCoreWaitFlag<0x2>(SYNCFLAGC2V);
         AscendC::SyncAll<true>();
         if (dequantSum1 > 0) { 
@@ -1091,7 +1117,10 @@ private:
         }
 
         blockEpilogue1.Finalize();
+        AscendC::SyncAll<true>();
+        DFFC_PROFILE_STAGE_END(profileStageBuf_, DFFC_PHASE_SWIGLU);
         // --- Phase 5: Combine（GMM2 输出 gmC2 写回各 rank 的 peermem offsetD）---
+        DFFC_PROFILE_STAGE_BEGIN(profileStageBuf_, DFFC_PHASE_COMBINE);
         // CombineV1：M*topK>4096，按 expert 组等 AIC flag 后整组 dequant+scatter，大batch
         // CombineV2：小 batch，按 GEMM tile + AIV subblock 切 M 行 scatter，小batch
         if (isCombineV1) {
@@ -1103,6 +1132,13 @@ private:
         }
 
         AscendC::SyncAll<true>();
+        DFFC_PROFILE_STAGE_END(profileStageBuf_, DFFC_PHASE_COMBINE);
+#if DISPATCH_FFN_COMBINE_PROFILE
+        if (DffcProfileIsAivWriter(coreIdx)) {
+            DffcProfileExportToExpertNums(
+                params.ptrExpertTokenNums, params.expertPerRank, profileStageBuf_);
+        }
+#endif
         // ResetTokenPerExpert：最后一个 AIV core 清零 peermem 中的 tokenPerExpert，供下次调用
         ResetTokenPerExpert(params.EP * paddedExpertNumAligned);
 
@@ -1340,6 +1376,9 @@ private:
     HcclShmem shmem;
     int32_t paddedExpertNumAligned;
     bool isCombineV1;
+#if DISPATCH_FFN_COMBINE_PROFILE
+    __gm__ int32_t* profileStageBuf_ = nullptr;
+#endif
 };
 
 } // namespace Catlass::Gemm::Kernel
