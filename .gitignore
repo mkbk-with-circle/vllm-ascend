@@ -221,3 +221,7 @@ csrc/third_party/
 
 # claude code skills
 .claude/skills/*
+
+# dispatch_ffn_combine profile 隔离环境与产物
+.dffc_profile/
+!tools/dffc_profile/
