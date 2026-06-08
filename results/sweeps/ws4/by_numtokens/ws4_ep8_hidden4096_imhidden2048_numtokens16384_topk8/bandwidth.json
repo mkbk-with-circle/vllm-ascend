@@ -1,0 +1,115 @@
+{
+  "case_params": {
+    "m": 16384,
+    "k": 4096,
+    "n": 4096,
+    "imhidden": 2048,
+    "e": 8,
+    "topk": 8,
+    "ep": 4,
+    "max_output_size": 157287
+  },
+  "bytes_per_token": {
+    "dispatch": 4128,
+    "combine": 8192
+  },
+  "per_rank": [
+    {
+      "rank": 0,
+      "tokens": 130966,
+      "bytes_dispatch": 540627648,
+      "bytes_combine": 1072873472,
+      "time_dispatch_us": 13475.0,
+      "time_combine_us": 10181.0,
+      "time_dispatch_active_us": 13527.0,
+      "time_combine_active_us": 8665.0,
+      "bw_dispatch_gbps": 40.120790204081636,
+      "bw_combine_gbps": 105.379969747569,
+      "bw_dispatch_active_gbps": 39.96655932579286,
+      "bw_combine_active_gbps": 123.81690386612811,
+      "truncation_warning": false
+    },
+    {
+      "rank": 1,
+      "tokens": 131214,
+      "bytes_dispatch": 541651392,
+      "bytes_combine": 1074905088,
+      "time_dispatch_us": 13481.0,
+      "time_combine_us": 10170.0,
+      "time_dispatch_active_us": 13474.0,
+      "time_combine_active_us": 8738.0,
+      "bw_dispatch_gbps": 40.178873377345894,
+      "bw_combine_gbps": 105.6937156342183,
+      "bw_dispatch_active_gbps": 40.19974706842809,
+      "bw_combine_active_gbps": 123.01500205996796,
+      "truncation_warning": false
+    },
+    {
+      "rank": 2,
+      "tokens": 131123,
+      "bytes_dispatch": 541275744,
+      "bytes_combine": 1074159616,
+      "time_dispatch_us": 13453.0,
+      "time_combine_us": 19491.0,
+      "time_dispatch_active_us": 13468.0,
+      "time_combine_active_us": 19493.0,
+      "bw_dispatch_gbps": 40.23457548502193,
+      "bw_combine_gbps": 55.1105441485814,
+      "bw_dispatch_active_gbps": 40.18976418176418,
+      "bw_combine_active_gbps": 55.104889755296774,
+      "truncation_warning": false
+    },
+    {
+      "rank": 3,
+      "tokens": 130985,
+      "bytes_dispatch": 540706080,
+      "bytes_combine": 1073029120,
+      "time_dispatch_us": 13468.0,
+      "time_combine_us": 19409.0,
+      "time_dispatch_active_us": 13472.0,
+      "time_combine_active_us": 19579.0,
+      "bw_dispatch_gbps": 40.14746658746659,
+      "bw_combine_gbps": 55.28513163996084,
+      "bw_dispatch_active_gbps": 40.13554631828979,
+      "bw_combine_active_gbps": 54.805103427141326,
+      "truncation_warning": false
+    }
+  ],
+  "job": {
+    "total_bytes_dispatch": 2164260864,
+    "total_bytes_combine": 4294967296,
+    "time_dispatch_us_max": 13481.0,
+    "time_combine_us_max": 19491.0,
+    "bw_dispatch_gbps": 160.54156694607224,
+    "bw_combine_gbps": 220.35643609871224,
+    "time_dispatch_active_us_max": 13527.0,
+    "time_combine_active_us_max": 19579.0,
+    "bw_dispatch_active_gbps": 159.99562829895763,
+    "bw_combine_active_gbps": 219.36601951070026
+  },
+  "per_rank_bw_dispatch_gbps": {
+    "min": 40.120790204081636,
+    "median": 40.163169982406245,
+    "max": 40.23457548502193,
+    "mean": 40.170426413479014
+  },
+  "per_rank_bw_combine_gbps": {
+    "min": 55.1105441485814,
+    "median": 80.33255069376492,
+    "max": 105.6937156342183,
+    "mean": 80.36734029258238
+  },
+  "per_rank_bw_dispatch_active_gbps": {
+    "min": 39.96655932579286,
+    "median": 40.16265525002699,
+    "max": 40.19974706842809,
+    "mean": 40.12290422356873
+  },
+  "per_rank_bw_combine_active_gbps": {
+    "min": 54.805103427141326,
+    "median": 89.05994590763237,
+    "max": 123.81690386612811,
+    "mean": 89.18547477713355
+  },
+  "truncation_warning_ranks": []
+}

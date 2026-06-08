@@ -1,0 +1,76 @@
+# Profile validation
+
+## FAIL
+- rank0: swiglu_w2.begin < gmm1.end (wait GMM1)
+
+## WARN
+- job: combine∥gmm2 overlap 2719µs (combine [17320,24696), gmm2 [12460,20039))
+- rank0: gmm1 e1 wall_begin < prev wall_end
+- rank0: gmm1 e2 wall_begin < prev wall_end
+- rank0: gmm1 e3 wall_begin < prev wall_end
+- rank0: gmm1 e4 wall_begin < prev wall_end
+- rank0: gmm1 e5 wall_begin < prev wall_end
+- rank0: gmm1 e6 wall_begin < prev wall_end
+- rank0: gmm1 e7 wall_begin < prev wall_end
+- rank0: gmm1 sum(active_us)=15553 > phase dur 15148
+- rank0: gmm2 e1 wall_begin < prev wall_end
+- rank0: gmm2 e2 wall_begin < prev wall_end
+- rank0: gmm2 e5 wall_begin < prev wall_end
+- rank0: gmm2 e6 wall_begin < prev wall_end
+- rank0: gmm2 e7 wall_begin < prev wall_end
+- rank1: gmm1 e1 wall_begin < prev wall_end
+- rank1: gmm1 e2 wall_begin < prev wall_end
+- rank1: gmm1 e3 wall_begin < prev wall_end
+- rank1: gmm1 e4 wall_begin < prev wall_end
+- rank1: gmm1 e5 wall_begin < prev wall_end
+- rank1: gmm1 e6 wall_begin < prev wall_end
+- rank1: gmm1 e7 wall_begin < prev wall_end
+- rank1: gmm1 sum(active_us)=15510 > phase dur 11278
+- rank1: gmm2 e1 wall_begin < prev wall_end
+- rank1: gmm2 e2 wall_begin < prev wall_end
+- rank1: gmm2 e3 wall_begin < prev wall_end
+- rank1: gmm2 e4 wall_begin < prev wall_end
+- rank1: gmm2 e5 wall_begin < prev wall_end
+- rank1: gmm2 e6 wall_begin < prev wall_end
+- rank1: gmm2 e7 wall_begin < prev wall_end
+- rank1: gmm2 sum(active_us)=8055 > phase dur 7517
+- rank2: gmm1 e1 wall_begin < prev wall_end
+- rank2: gmm1 e2 wall_begin < prev wall_end
+- rank2: gmm1 e3 wall_begin < prev wall_end
+- rank2: gmm1 e4 wall_begin < prev wall_end
+- rank2: gmm1 e5 wall_begin < prev wall_end
+- rank2: gmm1 e6 wall_begin < prev wall_end
+- rank2: gmm1 e7 wall_begin < prev wall_end
+- rank2: gmm1 sum(active_us)=15530 > phase dur 11276
+- rank2: gmm2 e1 wall_begin < prev wall_end
+- rank2: gmm2 e2 wall_begin < prev wall_end
+- rank2: gmm2 e3 wall_begin < prev wall_end
+- rank2: gmm2 e4 wall_begin < prev wall_end
+- rank2: gmm2 e5 wall_begin < prev wall_end
+- rank2: gmm2 e6 wall_begin < prev wall_end
+- rank2: gmm2 e7 wall_begin < prev wall_end
+- rank2: gmm2 sum(active_us)=7917 > phase dur 7641
+- rank3: gmm1 e1 wall_begin < prev wall_end
+- rank3: gmm1 e2 wall_begin < prev wall_end
+- rank3: gmm1 e3 wall_begin < prev wall_end
+- rank3: gmm1 e4 wall_begin < prev wall_end
+- rank3: gmm1 e5 wall_begin < prev wall_end
+- rank3: gmm1 e6 wall_begin < prev wall_end
+- rank3: gmm1 e7 wall_begin < prev wall_end
+- rank3: gmm1 sum(active_us)=15024 > phase dur 11096
+- rank3: gmm2 e1 wall_begin < prev wall_end
+- rank3: gmm2 e2 wall_begin < prev wall_end
+- rank3: gmm2 e3 wall_begin < prev wall_end
+- rank3: gmm2 e4 wall_begin < prev wall_end
+- rank3: gmm2 e5 wall_begin < prev wall_end
+- rank3: gmm2 e6 wall_begin < prev wall_end
+- rank3: gmm2 e7 wall_begin < prev wall_end
+- rank3: gmm2 sum(active_us)=7978 > phase dur 7410
+
+## Job timeline (µs)
+- prep: [0, 649) dur=649
+- dispatch: [649, 7474) dur=6825
+- swiglu: [10988, 17298) dur=6310
+- combine: [17320, 24696) dur=7376
+- gmm1: [1362, 12639) dur=11277
+- gmm2: [12460, 20039) dur=7579

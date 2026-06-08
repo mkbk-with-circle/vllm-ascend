@@ -1,0 +1,81 @@
+# Profile validation
+
+## PASS
+- 因果序检查通过
+
+## WARN
+- job: combine∥gmm2 overlap 678µs (combine [5481,10053), gmm2 [4683,6160))
+- rank0: gmm2 e1 wall_begin < prev wall_end
+- rank0: gmm2 e3 wall_begin < prev wall_end
+- rank0: gmm2 e4 wall_begin < prev wall_end
+- rank0: gmm2 e5 wall_begin < prev wall_end
+- rank0: gmm2 e6 wall_begin < prev wall_end
+- rank0: gmm2 e7 wall_begin < prev wall_end
+- rank1: gmm2 e1 wall_begin < prev wall_end
+- rank1: gmm2 e2 wall_begin < prev wall_end
+- rank1: gmm2 e3 wall_begin < prev wall_end
+- rank1: gmm2 e4 wall_begin < prev wall_end
+- rank1: gmm2 e5 wall_begin < prev wall_end
+- rank1: gmm2 e6 wall_begin < prev wall_end
+- rank1: gmm2 e7 wall_begin < prev wall_end
+- rank2: gmm2 e1 wall_begin < prev wall_end
+- rank2: gmm2 e2 wall_begin < prev wall_end
+- rank2: gmm2 e3 wall_begin < prev wall_end
+- rank2: gmm2 e4 wall_begin < prev wall_end
+- rank2: gmm2 e5 wall_begin < prev wall_end
+- rank2: gmm2 e6 wall_begin < prev wall_end
+- rank2: gmm2 e7 wall_begin < prev wall_end
+- rank3: dispatch e1 wall_begin < prev wall_end
+- rank3: dispatch e2 wall_begin < prev wall_end
+- rank3: dispatch e3 wall_begin < prev wall_end
+- rank3: dispatch e4 wall_begin < prev wall_end
+- rank3: dispatch e5 wall_begin < prev wall_end
+- rank3: gmm2 e1 wall_begin < prev wall_end
+- rank3: gmm2 e2 wall_begin < prev wall_end
+- rank3: gmm2 e3 wall_begin < prev wall_end
+- rank3: gmm2 e4 wall_begin < prev wall_end
+- rank3: gmm2 e5 wall_begin < prev wall_end
+- rank3: gmm2 e6 wall_begin < prev wall_end
+- rank3: gmm2 e7 wall_begin < prev wall_end
+- rank4: gmm2 e1 wall_begin < prev wall_end
+- rank4: gmm2 e3 wall_begin < prev wall_end
+- rank4: gmm2 e4 wall_begin < prev wall_end
+- rank4: gmm2 e5 wall_begin < prev wall_end
+- rank4: gmm2 e6 wall_begin < prev wall_end
+- rank4: gmm2 e7 wall_begin < prev wall_end
+- rank5: gmm1 e1 wall_begin < prev wall_end
+- rank5: gmm1 e2 wall_begin < prev wall_end
+- rank5: gmm1 e3 wall_begin < prev wall_end
+- rank5: gmm1 e4 wall_begin < prev wall_end
+- rank5: gmm1 e5 wall_begin < prev wall_end
+- rank5: gmm1 e6 wall_begin < prev wall_end
+- rank5: gmm1 e7 wall_begin < prev wall_end
+- rank5: gmm2 e1 wall_begin < prev wall_end
+- rank5: gmm2 e2 wall_begin < prev wall_end
+- rank5: gmm2 e3 wall_begin < prev wall_end
+- rank5: gmm2 e4 wall_begin < prev wall_end
+- rank5: gmm2 e5 wall_begin < prev wall_end
+- rank5: gmm2 e6 wall_begin < prev wall_end
+- rank5: gmm2 e7 wall_begin < prev wall_end
+- rank6: gmm2 e1 wall_begin < prev wall_end
+- rank6: gmm2 e2 wall_begin < prev wall_end
+- rank6: gmm2 e3 wall_begin < prev wall_end
+- rank6: gmm2 e4 wall_begin < prev wall_end
+- rank6: gmm2 e5 wall_begin < prev wall_end
+- rank6: gmm2 e6 wall_begin < prev wall_end
+- rank6: gmm2 e7 wall_begin < prev wall_end
+- rank7: gmm2 e1 wall_begin < prev wall_end
+- rank7: gmm2 e2 wall_begin < prev wall_end
+- rank7: gmm2 e3 wall_begin < prev wall_end
+- rank7: gmm2 e4 wall_begin < prev wall_end
+- rank7: gmm2 e5 wall_begin < prev wall_end
+- rank7: gmm2 e6 wall_begin < prev wall_end
+- rank7: gmm2 e7 wall_begin < prev wall_end
+
+## Job timeline (µs)
+- prep: [0, 714) dur=714
+- dispatch: [714, 3970) dur=3257
+- swiglu: [3784, 5286) dur=1502
+- combine: [5481, 10053) dur=4572
+- gmm1: [972, 4114) dur=3142
+- gmm2: [4683, 6160) dur=1476

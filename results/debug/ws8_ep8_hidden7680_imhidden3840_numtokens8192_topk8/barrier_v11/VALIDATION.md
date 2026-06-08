@@ -1,0 +1,143 @@
+# Profile validation
+
+## PASS
+- 因果序检查通过
+
+## WARN
+- job: combine∥gmm2 overlap 6524µs (combine [34886,41410), gmm2 [30242,43862))
+- rank0: gmm1 e1 wall_begin < prev wall_end
+- rank0: gmm1 e2 wall_begin < prev wall_end
+- rank0: gmm1 e3 wall_begin < prev wall_end
+- rank0: gmm1 e4 wall_begin < prev wall_end
+- rank0: gmm1 e5 wall_begin < prev wall_end
+- rank0: gmm1 e6 wall_begin < prev wall_end
+- rank0: gmm1 e7 wall_begin < prev wall_end
+- rank0: gmm1 sum(active_us)=31823 > phase dur 29242
+- rank0: gmm2 e1 wall_begin < prev wall_end
+- rank0: gmm2 e2 wall_begin < prev wall_end
+- rank0: gmm2 e3 wall_begin < prev wall_end
+- rank0: gmm2 e4 wall_begin < prev wall_end
+- rank0: gmm2 e5 wall_begin < prev wall_end
+- rank0: gmm2 e6 wall_begin < prev wall_end
+- rank0: gmm2 e7 wall_begin < prev wall_end
+- rank0: gmm2 sum(active_us)=16096 > phase dur 13581
+- rank1: gmm1 e1 wall_begin < prev wall_end
+- rank1: gmm1 e2 wall_begin < prev wall_end
+- rank1: gmm1 e3 wall_begin < prev wall_end
+- rank1: gmm1 e4 wall_begin < prev wall_end
+- rank1: gmm1 e5 wall_begin < prev wall_end
+- rank1: gmm1 e6 wall_begin < prev wall_end
+- rank1: gmm1 e7 wall_begin < prev wall_end
+- rank1: gmm1 sum(active_us)=31754 > phase dur 29178
+- rank1: gmm2 e1 wall_begin < prev wall_end
+- rank1: gmm2 e2 wall_begin < prev wall_end
+- rank1: gmm2 e3 wall_begin < prev wall_end
+- rank1: gmm2 e4 wall_begin < prev wall_end
+- rank1: gmm2 e5 wall_begin < prev wall_end
+- rank1: gmm2 e6 wall_begin < prev wall_end
+- rank1: gmm2 e7 wall_begin < prev wall_end
+- rank1: gmm2 sum(active_us)=16155 > phase dur 13759
+- rank2: gmm1 e1 wall_begin < prev wall_end
+- rank2: gmm1 e2 wall_begin < prev wall_end
+- rank2: gmm1 e3 wall_begin < prev wall_end
+- rank2: gmm1 e4 wall_begin < prev wall_end
+- rank2: gmm1 e5 wall_begin < prev wall_end
+- rank2: gmm1 e6 wall_begin < prev wall_end
+- rank2: gmm1 e7 wall_begin < prev wall_end
+- rank2: gmm1 sum(active_us)=31255 > phase dur 28708
+- rank2: gmm2 e1 wall_begin < prev wall_end
+- rank2: gmm2 e2 wall_begin < prev wall_end
+- rank2: gmm2 e3 wall_begin < prev wall_end
+- rank2: gmm2 e4 wall_begin < prev wall_end
+- rank2: gmm2 e5 wall_begin < prev wall_end
+- rank2: gmm2 e6 wall_begin < prev wall_end
+- rank2: gmm2 e7 wall_begin < prev wall_end
+- rank2: gmm2 sum(active_us)=16047 > phase dur 13634
+- rank3: gmm1 e1 wall_begin < prev wall_end
+- rank3: gmm1 e2 wall_begin < prev wall_end
+- rank3: gmm1 e3 wall_begin < prev wall_end
+- rank3: gmm1 e4 wall_begin < prev wall_end
+- rank3: gmm1 e5 wall_begin < prev wall_end
+- rank3: gmm1 e6 wall_begin < prev wall_end
+- rank3: gmm1 e7 wall_begin < prev wall_end
+- rank3: gmm1 sum(active_us)=31074 > phase dur 28415
+- rank3: gmm2 e1 wall_begin < prev wall_end
+- rank3: gmm2 e2 wall_begin < prev wall_end
+- rank3: gmm2 e3 wall_begin < prev wall_end
+- rank3: gmm2 e4 wall_begin < prev wall_end
+- rank3: gmm2 e5 wall_begin < prev wall_end
+- rank3: gmm2 e6 wall_begin < prev wall_end
+- rank3: gmm2 e7 wall_begin < prev wall_end
+- rank3: gmm2 sum(active_us)=15988 > phase dur 13607
+- rank4: gmm1 e1 wall_begin < prev wall_end
+- rank4: gmm1 e2 wall_begin < prev wall_end
+- rank4: gmm1 e3 wall_begin < prev wall_end
+- rank4: gmm1 e4 wall_begin < prev wall_end
+- rank4: gmm1 e5 wall_begin < prev wall_end
+- rank4: gmm1 e6 wall_begin < prev wall_end
+- rank4: gmm1 e7 wall_begin < prev wall_end
+- rank4: gmm1 sum(active_us)=30688 > phase dur 28180
+- rank4: gmm2 e1 wall_begin < prev wall_end
+- rank4: gmm2 e2 wall_begin < prev wall_end
+- rank4: gmm2 e3 wall_begin < prev wall_end
+- rank4: gmm2 e4 wall_begin < prev wall_end
+- rank4: gmm2 e5 wall_begin < prev wall_end
+- rank4: gmm2 e6 wall_begin < prev wall_end
+- rank4: gmm2 e7 wall_begin < prev wall_end
+- rank4: gmm2 sum(active_us)=15526 > phase dur 13505
+- rank5: gmm1 e1 wall_begin < prev wall_end
+- rank5: gmm1 e2 wall_begin < prev wall_end
+- rank5: gmm1 e3 wall_begin < prev wall_end
+- rank5: gmm1 e4 wall_begin < prev wall_end
+- rank5: gmm1 e5 wall_begin < prev wall_end
+- rank5: gmm1 e6 wall_begin < prev wall_end
+- rank5: gmm1 e7 wall_begin < prev wall_end
+- rank5: gmm1 sum(active_us)=30699 > phase dur 28214
+- rank5: gmm2 e1 wall_begin < prev wall_end
+- rank5: gmm2 e2 wall_begin < prev wall_end
+- rank5: gmm2 e3 wall_begin < prev wall_end
+- rank5: gmm2 e4 wall_begin < prev wall_end
+- rank5: gmm2 e5 wall_begin < prev wall_end
+- rank5: gmm2 e6 wall_begin < prev wall_end
+- rank5: gmm2 e7 wall_begin < prev wall_end
+- rank5: gmm2 sum(active_us)=15576 > phase dur 13493
+- rank6: gmm1 e1 wall_begin < prev wall_end
+- rank6: gmm1 e2 wall_begin < prev wall_end
+- rank6: gmm1 e3 wall_begin < prev wall_end
+- rank6: gmm1 e4 wall_begin < prev wall_end
+- rank6: gmm1 e5 wall_begin < prev wall_end
+- rank6: gmm1 e6 wall_begin < prev wall_end
+- rank6: gmm1 e7 wall_begin < prev wall_end
+- rank6: gmm1 sum(active_us)=32022 > phase dur 29371
+- rank6: gmm2 e1 wall_begin < prev wall_end
+- rank6: gmm2 e2 wall_begin < prev wall_end
+- rank6: gmm2 e3 wall_begin < prev wall_end
+- rank6: gmm2 e4 wall_begin < prev wall_end
+- rank6: gmm2 e5 wall_begin < prev wall_end
+- rank6: gmm2 e6 wall_begin < prev wall_end
+- rank6: gmm2 e7 wall_begin < prev wall_end
+- rank6: gmm2 sum(active_us)=15546 > phase dur 13653
+- rank7: gmm1 e1 wall_begin < prev wall_end
+- rank7: gmm1 e2 wall_begin < prev wall_end
+- rank7: gmm1 e3 wall_begin < prev wall_end
+- rank7: gmm1 e4 wall_begin < prev wall_end
+- rank7: gmm1 e5 wall_begin < prev wall_end
+- rank7: gmm1 e6 wall_begin < prev wall_end
+- rank7: gmm1 e7 wall_begin < prev wall_end
+- rank7: gmm1 sum(active_us)=31925 > phase dur 29208
+- rank7: gmm2 e1 wall_begin < prev wall_end
+- rank7: gmm2 e2 wall_begin < prev wall_end
+- rank7: gmm2 e3 wall_begin < prev wall_end
+- rank7: gmm2 e4 wall_begin < prev wall_end
+- rank7: gmm2 e5 wall_begin < prev wall_end
+- rank7: gmm2 e6 wall_begin < prev wall_end
+- rank7: gmm2 e7 wall_begin < prev wall_end
+- rank7: gmm2 sum(active_us)=15700 > phase dur 13690
+
+## Job timeline (µs)
+- prep: [0, 1228) dur=1228
+- dispatch: [1228, 5676) dur=4448
+- swiglu: [21868, 34018) dur=12150
+- combine: [34886, 41410) dur=6524
+- gmm1: [1441, 30384) dur=28943
+- gmm2: [30242, 43862) dur=13620

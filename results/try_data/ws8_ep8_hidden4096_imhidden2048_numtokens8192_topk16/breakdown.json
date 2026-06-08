@@ -1,0 +1,106 @@
+{
+  "t0_us": 0,
+  "phases": {
+    "prep": {
+      "begin_us_mean": 0,
+      "begin_us_median": 0.0,
+      "begin_us_max": 0,
+      "begin_us_min": 0,
+      "end_us_max": 45259,
+      "duration_us_mean": 22985.125,
+      "duration_us_median": 21413.0,
+      "duration_us_max": 45259,
+      "timeline_start_us": 0.0,
+      "timeline_duration_us": 45259,
+      "timeline_end_us": 45259.0
+    },
+    "dispatch": {
+      "begin_us_mean": 22985.375,
+      "begin_us_median": 21413.0,
+      "begin_us_max": 45259,
+      "begin_us_min": 867,
+      "end_us_max": 51474,
+      "duration_us_mean": 6240.875,
+      "duration_us_median": 6240.0,
+      "duration_us_max": 6304,
+      "timeline_start_us": 21413.0,
+      "timeline_duration_us": 6304,
+      "timeline_end_us": 27717.0
+    },
+    "swiglu": {
+      "begin_us_mean": 30713.25,
+      "begin_us_median": 29157.0,
+      "begin_us_max": 52954,
+      "begin_us_min": 8599,
+      "end_us_max": 56736,
+      "duration_us_mean": 3775.125,
+      "duration_us_median": 3777.0,
+      "duration_us_max": 3798,
+      "timeline_start_us": 29157.0,
+      "timeline_duration_us": 3798,
+      "timeline_end_us": 32955.0
+    },
+    "combine": {
+      "begin_us_mean": 42057.875,
+      "begin_us_median": 40444.5,
+      "begin_us_max": 64328,
+      "begin_us_min": 19976,
+      "end_us_max": 72056,
+      "duration_us_mean": 10063.875,
+      "duration_us_median": 10805.5,
+      "duration_us_max": 11016,
+      "timeline_start_us": 64328,
+      "timeline_duration_us": 11016,
+      "timeline_end_us": 51460.5
+    },
+    "gmm1": {
+      "begin_us_mean": 29226.25,
+      "begin_us_median": 27642.5,
+      "begin_us_max": 51474,
+      "begin_us_min": 7109,
+      "end_us_max": 59406,
+      "duration_us_mean": 7910.5,
+      "duration_us_median": 7914.5,
+      "duration_us_max": 7937,
+      "timeline_start_us": 7109,
+      "timeline_duration_us": 52297,
+      "timeline_end_us": 59406
+    },
+    "gmm2": {
+      "begin_us_mean": 37136.875,
+      "begin_us_median": 35534.5,
+      "begin_us_max": 59406,
+      "begin_us_min": 15046,
+      "end_us_max": 64328,
+      "duration_us_mean": 4921,
+      "duration_us_median": 4923.0,
+      "duration_us_max": 4930,
+      "timeline_start_us": 15046,
+      "timeline_duration_us": 49282,
+      "timeline_end_us": 64328
+    }
+  },
+  "anomalies": [],
+  "num_ranks": 8,
+  "valid_ranks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "profile_version": 5,
+  "case_params": {
+    "name": "S4",
+    "m": 8192,
+    "k": 4096,
+    "n": 4096,
+    "e": 2,
+    "topk": 16,
+    "max_output_size": 131072,
+    "imhidden": 2048
+  }
+}

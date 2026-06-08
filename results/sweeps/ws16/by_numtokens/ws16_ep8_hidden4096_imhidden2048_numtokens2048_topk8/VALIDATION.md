@@ -1,0 +1,297 @@
+# Profile validation
+
+## PASS
+- 因果序检查通过
+
+## WARN
+- rank0: gmm1 e1 wall_begin < prev wall_end
+- rank0: gmm1 e2 wall_begin < prev wall_end
+- rank0: gmm1 e3 wall_begin < prev wall_end
+- rank0: gmm1 e4 wall_begin < prev wall_end
+- rank0: gmm1 e5 wall_begin < prev wall_end
+- rank0: gmm1 e6 wall_begin < prev wall_end
+- rank0: gmm1 e7 wall_begin < prev wall_end
+- rank0: gmm2 e1 wall_begin < prev wall_end
+- rank0: gmm2 e2 wall_begin < prev wall_end
+- rank0: gmm2 e3 wall_begin < prev wall_end
+- rank0: gmm2 e4 wall_begin < prev wall_end
+- rank0: gmm2 e5 wall_begin < prev wall_end
+- rank0: gmm2 e6 wall_begin < prev wall_end
+- rank0: gmm2 e7 wall_begin < prev wall_end
+- rank10: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank10: gmm1 e1 wall_begin < prev wall_end
+- rank10: gmm1 e2 wall_begin < prev wall_end
+- rank10: gmm1 e3 wall_begin < prev wall_end
+- rank10: gmm1 e4 wall_begin < prev wall_end
+- rank10: gmm1 e5 wall_begin < prev wall_end
+- rank10: gmm1 e6 wall_begin < prev wall_end
+- rank10: gmm1 e7 wall_begin < prev wall_end
+- rank10: gmm2 e1 wall_begin < prev wall_end
+- rank10: gmm2 e2 wall_begin < prev wall_end
+- rank10: gmm2 e3 wall_begin < prev wall_end
+- rank10: gmm2 e4 wall_begin < prev wall_end
+- rank10: gmm2 e5 wall_begin < prev wall_end
+- rank10: gmm2 e6 wall_begin < prev wall_end
+- rank10: gmm2 e7 wall_begin < prev wall_end
+- rank11: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank11: dispatch e1 wall_begin < prev wall_end
+- rank11: dispatch e2 wall_begin < prev wall_end
+- rank11: dispatch e3 wall_begin < prev wall_end
+- rank11: dispatch e4 wall_begin < prev wall_end
+- rank11: dispatch e5 wall_begin < prev wall_end
+- rank11: gmm1 e1 wall_begin < prev wall_end
+- rank11: gmm1 e2 wall_begin < prev wall_end
+- rank11: gmm1 e3 wall_begin < prev wall_end
+- rank11: gmm1 e4 wall_begin < prev wall_end
+- rank11: gmm1 e5 wall_begin < prev wall_end
+- rank11: gmm1 e6 wall_begin < prev wall_end
+- rank11: gmm1 e7 wall_begin < prev wall_end
+- rank11: gmm2 e1 wall_begin < prev wall_end
+- rank11: gmm2 e2 wall_begin < prev wall_end
+- rank11: gmm2 e3 wall_begin < prev wall_end
+- rank11: gmm2 e4 wall_begin < prev wall_end
+- rank11: gmm2 e5 wall_begin < prev wall_end
+- rank11: gmm2 e6 wall_begin < prev wall_end
+- rank11: gmm2 e7 wall_begin < prev wall_end
+- rank12: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank12: dispatch e1 wall_begin < prev wall_end
+- rank12: dispatch e2 wall_begin < prev wall_end
+- rank12: dispatch e3 wall_begin < prev wall_end
+- rank12: dispatch e4 wall_begin < prev wall_end
+- rank12: dispatch e5 wall_begin < prev wall_end
+- rank12: gmm1 e1 wall_begin < prev wall_end
+- rank12: gmm1 e2 wall_begin < prev wall_end
+- rank12: gmm1 e3 wall_begin < prev wall_end
+- rank12: gmm1 e4 wall_begin < prev wall_end
+- rank12: gmm1 e5 wall_begin < prev wall_end
+- rank12: gmm1 e6 wall_begin < prev wall_end
+- rank12: gmm1 e7 wall_begin < prev wall_end
+- rank12: gmm2 e1 wall_begin < prev wall_end
+- rank12: gmm2 e2 wall_begin < prev wall_end
+- rank12: gmm2 e3 wall_begin < prev wall_end
+- rank12: gmm2 e4 wall_begin < prev wall_end
+- rank12: gmm2 e5 wall_begin < prev wall_end
+- rank12: gmm2 e6 wall_begin < prev wall_end
+- rank12: gmm2 e7 wall_begin < prev wall_end
+- rank13: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank13: dispatch e1 wall_begin < prev wall_end
+- rank13: dispatch e2 wall_begin < prev wall_end
+- rank13: dispatch e3 wall_begin < prev wall_end
+- rank13: dispatch e4 wall_begin < prev wall_end
+- rank13: dispatch e5 wall_begin < prev wall_end
+- rank13: gmm1 e1 wall_begin < prev wall_end
+- rank13: gmm1 e2 wall_begin < prev wall_end
+- rank13: gmm1 e3 wall_begin < prev wall_end
+- rank13: gmm1 e4 wall_begin < prev wall_end
+- rank13: gmm1 e5 wall_begin < prev wall_end
+- rank13: gmm1 e6 wall_begin < prev wall_end
+- rank13: gmm1 e7 wall_begin < prev wall_end
+- rank13: gmm2 e1 wall_begin < prev wall_end
+- rank13: gmm2 e2 wall_begin < prev wall_end
+- rank13: gmm2 e3 wall_begin < prev wall_end
+- rank13: gmm2 e4 wall_begin < prev wall_end
+- rank13: gmm2 e5 wall_begin < prev wall_end
+- rank13: gmm2 e6 wall_begin < prev wall_end
+- rank13: gmm2 e7 wall_begin < prev wall_end
+- rank14: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank14: dispatch e1 wall_begin < prev wall_end
+- rank14: dispatch e2 wall_begin < prev wall_end
+- rank14: dispatch e3 wall_begin < prev wall_end
+- rank14: dispatch e4 wall_begin < prev wall_end
+- rank14: dispatch e5 wall_begin < prev wall_end
+- rank14: gmm1 e1 wall_begin < prev wall_end
+- rank14: gmm1 e2 wall_begin < prev wall_end
+- rank14: gmm1 e3 wall_begin < prev wall_end
+- rank14: gmm1 e4 wall_begin < prev wall_end
+- rank14: gmm1 e5 wall_begin < prev wall_end
+- rank14: gmm1 e6 wall_begin < prev wall_end
+- rank14: gmm1 e7 wall_begin < prev wall_end
+- rank14: gmm2 e1 wall_begin < prev wall_end
+- rank14: gmm2 e2 wall_begin < prev wall_end
+- rank14: gmm2 e3 wall_begin < prev wall_end
+- rank14: gmm2 e4 wall_begin < prev wall_end
+- rank14: gmm2 e5 wall_begin < prev wall_end
+- rank14: gmm2 e6 wall_begin < prev wall_end
+- rank14: gmm2 e7 wall_begin < prev wall_end
+- rank15: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank15: dispatch e1 wall_begin < prev wall_end
+- rank15: dispatch e2 wall_begin < prev wall_end
+- rank15: dispatch e3 wall_begin < prev wall_end
+- rank15: dispatch e4 wall_begin < prev wall_end
+- rank15: dispatch e5 wall_begin < prev wall_end
+- rank15: gmm1 e1 wall_begin < prev wall_end
+- rank15: gmm1 e2 wall_begin < prev wall_end
+- rank15: gmm1 e3 wall_begin < prev wall_end
+- rank15: gmm1 e4 wall_begin < prev wall_end
+- rank15: gmm1 e5 wall_begin < prev wall_end
+- rank15: gmm1 e6 wall_begin < prev wall_end
+- rank15: gmm1 e7 wall_begin < prev wall_end
+- rank15: gmm2 e1 wall_begin < prev wall_end
+- rank15: gmm2 e2 wall_begin < prev wall_end
+- rank15: gmm2 e3 wall_begin < prev wall_end
+- rank15: gmm2 e4 wall_begin < prev wall_end
+- rank15: gmm2 e5 wall_begin < prev wall_end
+- rank15: gmm2 e6 wall_begin < prev wall_end
+- rank15: gmm2 e7 wall_begin < prev wall_end
+- rank1: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank1: dispatch e1 wall_begin < prev wall_end
+- rank1: dispatch e2 wall_begin < prev wall_end
+- rank1: dispatch e3 wall_begin < prev wall_end
+- rank1: dispatch e4 wall_begin < prev wall_end
+- rank1: dispatch e5 wall_begin < prev wall_end
+- rank1: gmm1 e1 wall_begin < prev wall_end
+- rank1: gmm1 e2 wall_begin < prev wall_end
+- rank1: gmm1 e3 wall_begin < prev wall_end
+- rank1: gmm1 e4 wall_begin < prev wall_end
+- rank1: gmm1 e5 wall_begin < prev wall_end
+- rank1: gmm1 e6 wall_begin < prev wall_end
+- rank1: gmm1 e7 wall_begin < prev wall_end
+- rank1: gmm2 e1 wall_begin < prev wall_end
+- rank1: gmm2 e2 wall_begin < prev wall_end
+- rank1: gmm2 e3 wall_begin < prev wall_end
+- rank1: gmm2 e4 wall_begin < prev wall_end
+- rank1: gmm2 e5 wall_begin < prev wall_end
+- rank1: gmm2 e6 wall_begin < prev wall_end
+- rank1: gmm2 e7 wall_begin < prev wall_end
+- rank2: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank2: gmm1 e1 wall_begin < prev wall_end
+- rank2: gmm1 e2 wall_begin < prev wall_end
+- rank2: gmm1 e3 wall_begin < prev wall_end
+- rank2: gmm1 e4 wall_begin < prev wall_end
+- rank2: gmm1 e5 wall_begin < prev wall_end
+- rank2: gmm1 e6 wall_begin < prev wall_end
+- rank2: gmm1 e7 wall_begin < prev wall_end
+- rank2: gmm2 e1 wall_begin < prev wall_end
+- rank2: gmm2 e2 wall_begin < prev wall_end
+- rank2: gmm2 e3 wall_begin < prev wall_end
+- rank2: gmm2 e4 wall_begin < prev wall_end
+- rank2: gmm2 e5 wall_begin < prev wall_end
+- rank2: gmm2 e6 wall_begin < prev wall_end
+- rank2: gmm2 e7 wall_begin < prev wall_end
+- rank3: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank3: gmm1 e1 wall_begin < prev wall_end
+- rank3: gmm1 e2 wall_begin < prev wall_end
+- rank3: gmm1 e3 wall_begin < prev wall_end
+- rank3: gmm1 e4 wall_begin < prev wall_end
+- rank3: gmm1 e5 wall_begin < prev wall_end
+- rank3: gmm1 e6 wall_begin < prev wall_end
+- rank3: gmm1 e7 wall_begin < prev wall_end
+- rank3: gmm2 e1 wall_begin < prev wall_end
+- rank3: gmm2 e2 wall_begin < prev wall_end
+- rank3: gmm2 e3 wall_begin < prev wall_end
+- rank3: gmm2 e4 wall_begin < prev wall_end
+- rank3: gmm2 e5 wall_begin < prev wall_end
+- rank3: gmm2 e6 wall_begin < prev wall_end
+- rank3: gmm2 e7 wall_begin < prev wall_end
+- rank4: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank4: gmm1 e1 wall_begin < prev wall_end
+- rank4: gmm1 e2 wall_begin < prev wall_end
+- rank4: gmm1 e3 wall_begin < prev wall_end
+- rank4: gmm1 e4 wall_begin < prev wall_end
+- rank4: gmm1 e5 wall_begin < prev wall_end
+- rank4: gmm1 e6 wall_begin < prev wall_end
+- rank4: gmm1 e7 wall_begin < prev wall_end
+- rank4: gmm2 e1 wall_begin < prev wall_end
+- rank4: gmm2 e2 wall_begin < prev wall_end
+- rank4: gmm2 e3 wall_begin < prev wall_end
+- rank4: gmm2 e4 wall_begin < prev wall_end
+- rank4: gmm2 e5 wall_begin < prev wall_end
+- rank4: gmm2 e6 wall_begin < prev wall_end
+- rank4: gmm2 e7 wall_begin < prev wall_end
+- rank5: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank5: gmm1 e1 wall_begin < prev wall_end
+- rank5: gmm1 e2 wall_begin < prev wall_end
+- rank5: gmm1 e3 wall_begin < prev wall_end
+- rank5: gmm1 e4 wall_begin < prev wall_end
+- rank5: gmm1 e5 wall_begin < prev wall_end
+- rank5: gmm1 e6 wall_begin < prev wall_end
+- rank5: gmm1 e7 wall_begin < prev wall_end
+- rank5: gmm2 e1 wall_begin < prev wall_end
+- rank5: gmm2 e2 wall_begin < prev wall_end
+- rank5: gmm2 e3 wall_begin < prev wall_end
+- rank5: gmm2 e4 wall_begin < prev wall_end
+- rank5: gmm2 e5 wall_begin < prev wall_end
+- rank5: gmm2 e6 wall_begin < prev wall_end
+- rank5: gmm2 e7 wall_begin < prev wall_end
+- rank6: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank6: dispatch e1 wall_begin < prev wall_end
+- rank6: dispatch e2 wall_begin < prev wall_end
+- rank6: dispatch e3 wall_begin < prev wall_end
+- rank6: dispatch e4 wall_begin < prev wall_end
+- rank6: dispatch e5 wall_begin < prev wall_end
+- rank6: gmm1 e1 wall_begin < prev wall_end
+- rank6: gmm1 e2 wall_begin < prev wall_end
+- rank6: gmm1 e3 wall_begin < prev wall_end
+- rank6: gmm1 e4 wall_begin < prev wall_end
+- rank6: gmm1 e5 wall_begin < prev wall_end
+- rank6: gmm1 e6 wall_begin < prev wall_end
+- rank6: gmm1 e7 wall_begin < prev wall_end
+- rank6: gmm2 e1 wall_begin < prev wall_end
+- rank6: gmm2 e2 wall_begin < prev wall_end
+- rank6: gmm2 e3 wall_begin < prev wall_end
+- rank6: gmm2 e4 wall_begin < prev wall_end
+- rank6: gmm2 e5 wall_begin < prev wall_end
+- rank6: gmm2 e6 wall_begin < prev wall_end
+- rank6: gmm2 e7 wall_begin < prev wall_end
+- rank7: gmm1 e1 wall_begin < prev wall_end
+- rank7: gmm1 e2 wall_begin < prev wall_end
+- rank7: gmm1 e3 wall_begin < prev wall_end
+- rank7: gmm1 e4 wall_begin < prev wall_end
+- rank7: gmm1 e5 wall_begin < prev wall_end
+- rank7: gmm1 e6 wall_begin < prev wall_end
+- rank7: gmm1 e7 wall_begin < prev wall_end
+- rank7: gmm2 e1 wall_begin < prev wall_end
+- rank7: gmm2 e2 wall_begin < prev wall_end
+- rank7: gmm2 e3 wall_begin < prev wall_end
+- rank7: gmm2 e4 wall_begin < prev wall_end
+- rank7: gmm2 e5 wall_begin < prev wall_end
+- rank7: gmm2 e6 wall_begin < prev wall_end
+- rank7: gmm2 e7 wall_begin < prev wall_end
+- rank8: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank8: dispatch e1 wall_begin < prev wall_end
+- rank8: dispatch e2 wall_begin < prev wall_end
+- rank8: dispatch e3 wall_begin < prev wall_end
+- rank8: dispatch e4 wall_begin < prev wall_end
+- rank8: dispatch e5 wall_begin < prev wall_end
+- rank8: gmm1 e1 wall_begin < prev wall_end
+- rank8: gmm1 e2 wall_begin < prev wall_end
+- rank8: gmm1 e3 wall_begin < prev wall_end
+- rank8: gmm1 e4 wall_begin < prev wall_end
+- rank8: gmm1 e5 wall_begin < prev wall_end
+- rank8: gmm1 e6 wall_begin < prev wall_end
+- rank8: gmm1 e7 wall_begin < prev wall_end
+- rank8: gmm2 e1 wall_begin < prev wall_end
+- rank8: gmm2 e2 wall_begin < prev wall_end
+- rank8: gmm2 e3 wall_begin < prev wall_end
+- rank8: gmm2 e4 wall_begin < prev wall_end
+- rank8: gmm2 e5 wall_begin < prev wall_end
+- rank8: gmm2 e6 wall_begin < prev wall_end
+- rank8: gmm2 e7 wall_begin < prev wall_end
+- rank9: swiglu_w2.begin < gmm1.end (wait GMM1)
+- rank9: dispatch e1 wall_begin < prev wall_end
+- rank9: dispatch e2 wall_begin < prev wall_end
+- rank9: dispatch e3 wall_begin < prev wall_end
+- rank9: dispatch e4 wall_begin < prev wall_end
+- rank9: dispatch e5 wall_begin < prev wall_end
+- rank9: gmm1 e1 wall_begin < prev wall_end
+- rank9: gmm1 e2 wall_begin < prev wall_end
+- rank9: gmm1 e3 wall_begin < prev wall_end
+- rank9: gmm1 e4 wall_begin < prev wall_end
+- rank9: gmm1 e5 wall_begin < prev wall_end
+- rank9: gmm1 e6 wall_begin < prev wall_end
+- rank9: gmm1 e7 wall_begin < prev wall_end
+- rank9: gmm2 e1 wall_begin < prev wall_end
+- rank9: gmm2 e2 wall_begin < prev wall_end
+- rank9: gmm2 e3 wall_begin < prev wall_end
+- rank9: gmm2 e4 wall_begin < prev wall_end
+- rank9: gmm2 e5 wall_begin < prev wall_end
+- rank9: gmm2 e6 wall_begin < prev wall_end
+- rank9: gmm2 e7 wall_begin < prev wall_end
+
+## Job timeline (µs)
+- prep: [0, 592) dur=592
+- dispatch: [592, 1208) dur=616
+- swiglu: [3911, 4788) dur=876
+- combine: [2706, 3592) dur=886
+- gmm1: [2751, 4584) dur=1832
+- gmm2: [4580, 5747) dur=1166

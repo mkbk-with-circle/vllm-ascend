@@ -1,0 +1,430 @@
+{
+  "t0_us": 0,
+  "phases": {
+    "prep": {
+      "begin_us_mean": 0,
+      "begin_us_median": 0.0,
+      "begin_us_max": 0,
+      "begin_us_min": 0,
+      "end_us_max": 841,
+      "duration_us_mean": 768.375,
+      "duration_us_median": 774.5,
+      "duration_us_max": 841,
+      "duration_us_min_nonzero": 658,
+      "timeline_start_us": 0.0,
+      "timeline_duration_us": 774.5,
+      "timeline_end_us": 774.5,
+      "timeline_n_ranks": 16,
+      "offset_min_us": 0.0,
+      "offset_max_us": 0.0,
+      "end_min_us": 658.0,
+      "end_max_us": 841.0,
+      "insufficient_ranks": false
+    },
+    "dispatch": {
+      "begin_us_mean": 769,
+      "begin_us_median": 775.5,
+      "begin_us_max": 843,
+      "begin_us_min": 659,
+      "end_us_max": 3178,
+      "duration_us_mean": 2294.9375,
+      "duration_us_median": 2293.5,
+      "duration_us_max": 2346,
+      "duration_us_min_nonzero": 2253,
+      "timeline_start_us": 774.5,
+      "timeline_duration_us": 2293.5,
+      "timeline_end_us": 3068.0,
+      "timeline_n_ranks": 16,
+      "offset_min_us": 774.5,
+      "offset_max_us": 774.5,
+      "end_min_us": 3027.5,
+      "end_max_us": 3120.5,
+      "insufficient_ranks": false
+    },
+    "swiglu": {
+      "begin_us_mean": 3640.125,
+      "begin_us_median": 3595.0,
+      "begin_us_max": 3929,
+      "begin_us_min": 3332,
+      "end_us_max": 6067,
+      "duration_us_mean": 2109.625,
+      "duration_us_median": 2113.0,
+      "duration_us_max": 2156,
+      "duration_us_min_nonzero": 2043,
+      "timeline_start_us": 3603.5,
+      "timeline_duration_us": 2113.0,
+      "timeline_end_us": 5716.5,
+      "timeline_n_ranks": 16,
+      "offset_min_us": 3376.5,
+      "offset_max_us": 3914.5,
+      "end_min_us": 5477.5,
+      "end_max_us": 6059.5,
+      "insufficient_ranks": false
+    },
+    "combine": {
+      "begin_us_mean": 5787.3125,
+      "begin_us_median": 5780.5,
+      "begin_us_max": 5926,
+      "begin_us_min": 5698,
+      "end_us_max": 9589,
+      "duration_us_mean": 3377,
+      "duration_us_median": 3635.0,
+      "duration_us_max": 3759,
+      "duration_us_min_nonzero": 1477,
+      "timeline_start_us": 5799.5,
+      "timeline_duration_us": 3635.0,
+      "timeline_end_us": 9434.5,
+      "timeline_n_ranks": 16,
+      "offset_min_us": 5721.5,
+      "offset_max_us": 5857.5,
+      "end_min_us": 7293.5,
+      "end_max_us": 9560.5,
+      "insufficient_ranks": false
+    },
+    "gmm1": {
+      "begin_us_mean": 966.5625,
+      "begin_us_median": 965.0,
+      "begin_us_max": 1083,
+      "begin_us_min": 803,
+      "end_us_max": 5466,
+      "duration_us_mean": 4179.875,
+      "duration_us_median": 4092.5,
+      "duration_us_max": 4386,
+      "duration_us_min_nonzero": 4028,
+      "timeline_start_us": 987.0,
+      "timeline_duration_us": 4092.5,
+      "timeline_end_us": 5079.5,
+      "timeline_n_ranks": 16,
+      "offset_min_us": 833.5,
+      "offset_max_us": 1075.5,
+      "end_min_us": 4875.5,
+      "end_max_us": 5440.5,
+      "insufficient_ranks": false
+    },
+    "gmm2": {
+      "begin_us_mean": 4999.5625,
+      "begin_us_median": 5014.0,
+      "begin_us_max": 5192,
+      "begin_us_min": 4557,
+      "end_us_max": 8779,
+      "duration_us_mean": 3329.75,
+      "duration_us_median": 3318.5,
+      "duration_us_max": 3772,
+      "duration_us_min_nonzero": 2983,
+      "timeline_start_us": 5026.5,
+      "timeline_duration_us": 3318.5,
+      "timeline_end_us": 8345.0,
+      "timeline_n_ranks": 16,
+      "offset_min_us": 4601.5,
+      "offset_max_us": 5221.5,
+      "end_min_us": 7829.5,
+      "end_max_us": 8710.5,
+      "insufficient_ranks": false
+    },
+    "swiglu_w1": {
+      "begin_us_mean": 3687.6875,
+      "begin_us_median": 3683.5,
+      "begin_us_max": 3840,
+      "begin_us_min": 3574,
+      "end_us_max": 4828,
+      "duration_us_mean": 982.75,
+      "duration_us_median": 982.5,
+      "duration_us_max": 991,
+      "duration_us_min_nonzero": 973,
+      "timeline_start_us": 3689.5,
+      "timeline_duration_us": 982.5,
+      "timeline_end_us": 4672.0,
+      "timeline_n_ranks": 16,
+      "offset_min_us": 3619.5,
+      "offset_max_us": 3771.5,
+      "end_min_us": 4592.5,
+      "end_max_us": 4759.5,
+      "insufficient_ranks": false
+    },
+    "swiglu_w2": {
+      "begin_us_mean": 5193.3125,
+      "begin_us_median": 5187.5,
+      "begin_us_max": 5331,
+      "begin_us_min": 5099,
+      "end_us_max": 5918,
+      "duration_us_mean": 585.875,
+      "duration_us_median": 586.0,
+      "duration_us_max": 595,
+      "duration_us_min_nonzero": 578,
+      "timeline_start_us": 5203.5,
+      "timeline_duration_us": 586.0,
+      "timeline_end_us": 5789.5,
+      "timeline_n_ranks": 16,
+      "offset_min_us": 5128.5,
+      "offset_max_us": 5262.5,
+      "end_min_us": 5712.5,
+      "end_max_us": 5849.5,
+      "insufficient_ranks": false
+    },
+    "unpermute": {
+      "begin_us_mean": 9965.1875,
+      "begin_us_median": 9970.0,
+      "begin_us_max": 10036,
+      "begin_us_min": 9856,
+      "end_us_max": 10607,
+      "duration_us_mean": 574.125,
+      "duration_us_median": 574.5,
+      "duration_us_max": 580,
+      "duration_us_min_nonzero": 566,
+      "timeline_start_us": 9971.5,
+      "timeline_duration_us": 574.5,
+      "timeline_end_us": 10546.0,
+      "timeline_n_ranks": 16,
+      "offset_min_us": 9967.5,
+      "offset_max_us": 9972.5,
+      "end_min_us": 10538.5,
+      "end_max_us": 10551.5,
+      "insufficient_ranks": false
+    }
+  },
+  "anomalies": [],
+  "num_ranks": 16,
+  "valid_ranks": [
+    0,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "profile_version": 10,
+  "case_params": {
+    "name": "sweep_imhidden_1024",
+    "m": 8192,
+    "k": 4096,
+    "n": 2048,
+    "e": 8,
+    "topk": 8,
+    "max_output_size": 78644,
+    "imhidden": 1024,
+    "profile_iters": {
+      "warmup": 10,
+      "measure": 50
+    }
+  },
+  "timeline_aggregation": "relative_median",
+  "timeline_repaired": [],
+  "prep_skew_us": {
+    "median": 774.5,
+    "min": 658.0,
+    "max": 841.0
+  },
+  "prep_lead_us": 774.5,
+  "expert_segments": {
+    "dispatch": [
+      {
+        "expert": 0,
+        "wall_begin_us": 695.5,
+        "wall_end_us": 986.5,
+        "active_us": 278
+      },
+      {
+        "expert": 1,
+        "wall_begin_us": 986.5,
+        "wall_end_us": 1277.0,
+        "active_us": 282
+      },
+      {
+        "expert": 2,
+        "wall_begin_us": 1274.0,
+        "wall_end_us": 1567.5,
+        "active_us": 283
+      },
+      {
+        "expert": 3,
+        "wall_begin_us": 1570.5,
+        "wall_end_us": 1857.5,
+        "active_us": 284
+      },
+      {
+        "expert": 4,
+        "wall_begin_us": 1858.5,
+        "wall_end_us": 2141.5,
+        "active_us": 282
+      },
+      {
+        "expert": 5,
+        "wall_begin_us": 2144.0,
+        "wall_end_us": 2422.5,
+        "active_us": 280
+      },
+      {
+        "expert": 6,
+        "wall_begin_us": 2426.5,
+        "wall_end_us": 2709.5,
+        "active_us": 284
+      },
+      {
+        "expert": 7,
+        "wall_begin_us": 2714.5,
+        "wall_end_us": 2995.5,
+        "active_us": 280
+      }
+    ],
+    "combine": [
+      {
+        "expert": 0,
+        "wall_begin_us": 5706.0,
+        "wall_end_us": 6098.5,
+        "active_us": 414
+      },
+      {
+        "expert": 1,
+        "wall_begin_us": 6177.0,
+        "wall_end_us": 6607.0,
+        "active_us": 450
+      },
+      {
+        "expert": 2,
+        "wall_begin_us": 6686.5,
+        "wall_end_us": 7078.5,
+        "active_us": 440
+      },
+      {
+        "expert": 3,
+        "wall_begin_us": 7187.5,
+        "wall_end_us": 7580.5,
+        "active_us": 441
+      },
+      {
+        "expert": 4,
+        "wall_begin_us": 7677.0,
+        "wall_end_us": 8080.5,
+        "active_us": 446
+      },
+      {
+        "expert": 5,
+        "wall_begin_us": 8169.0,
+        "wall_end_us": 8573.5,
+        "active_us": 443
+      },
+      {
+        "expert": 6,
+        "wall_begin_us": 8675.5,
+        "wall_end_us": 9070.5,
+        "active_us": 451
+      },
+      {
+        "expert": 7,
+        "wall_begin_us": 9183.5,
+        "wall_end_us": 9557.0,
+        "active_us": 425
+      }
+    ],
+    "gmm1": [
+      {
+        "expert": 0,
+        "wall_begin_us": 985.5,
+        "wall_end_us": 1536.5,
+        "active_us": 551
+      },
+      {
+        "expert": 1,
+        "wall_begin_us": 1536.5,
+        "wall_end_us": 2193.0,
+        "active_us": 572
+      },
+      {
+        "expert": 2,
+        "wall_begin_us": 2193.0,
+        "wall_end_us": 2909.0,
+        "active_us": 570
+      },
+      {
+        "expert": 3,
+        "wall_begin_us": 2909.0,
+        "wall_end_us": 3561.0,
+        "active_us": 546
+      },
+      {
+        "expert": 4,
+        "wall_begin_us": 3561.0,
+        "wall_end_us": 4129.5,
+        "active_us": 497
+      },
+      {
+        "expert": 5,
+        "wall_begin_us": 4129.5,
+        "wall_end_us": 4706.0,
+        "active_us": 530
+      },
+      {
+        "expert": 6,
+        "wall_begin_us": 4706.0,
+        "wall_end_us": 5267.5,
+        "active_us": 529
+      },
+      {
+        "expert": 7,
+        "wall_begin_us": 5267.5,
+        "wall_end_us": 5777.5,
+        "active_us": 486
+      }
+    ],
+    "gmm2": [
+      {
+        "expert": 0,
+        "wall_begin_us": 5777.5,
+        "wall_end_us": 6145.5,
+        "active_us": 357
+      },
+      {
+        "expert": 1,
+        "wall_begin_us": 6145.5,
+        "wall_end_us": 6550.0,
+        "active_us": 396
+      },
+      {
+        "expert": 2,
+        "wall_begin_us": 6550.0,
+        "wall_end_us": 7003.0,
+        "active_us": 422
+      },
+      {
+        "expert": 3,
+        "wall_begin_us": 7003.0,
+        "wall_end_us": 7508.0,
+        "active_us": 429
+      },
+      {
+        "expert": 4,
+        "wall_begin_us": 7508.0,
+        "wall_end_us": 8069.0,
+        "active_us": 422
+      },
+      {
+        "expert": 5,
+        "wall_begin_us": 8069.0,
+        "wall_end_us": 8702.0,
+        "active_us": 428
+      },
+      {
+        "expert": 6,
+        "wall_begin_us": 8702.0,
+        "wall_end_us": 9387.0,
+        "active_us": 431
+      },
+      {
+        "expert": 7,
+        "wall_begin_us": 9387.0,
+        "wall_end_us": 10172.5,
+        "active_us": 430
+      }
+    ]
+  }
+}

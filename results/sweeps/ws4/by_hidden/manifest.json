@@ -1,0 +1,239 @@
+{
+  "axis": "hidden",
+  "fixed": {
+    "m": 8192,
+    "topk": 8,
+    "e": 8
+  },
+  "values": [
+    2048,
+    4096,
+    6144,
+    7168,
+    7680,
+    7936,
+    7968,
+    8000
+  ],
+  "world_size": 4,
+  "cases": [
+    {
+      "case_name": "sweep_hidden_2048",
+      "slug": "ws4_ep8_hidden2048_imhidden1024_numtokens8192_topk8",
+      "path": "results/sweeps/ws4/by_hidden/ws4_ep8_hidden2048_imhidden1024_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_hidden_2048",
+        "m": 8192,
+        "k": 2048,
+        "n": 2048,
+        "e": 8,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 1024
+      },
+      "sweep_value": 2048,
+      "bandwidth": {
+        "dispatch_gbps_job": 89.62188034188034,
+        "combine_gbps_job": 124.40526288958407,
+        "dispatch_gbps_job_active": 90.05111808422791,
+        "combine_gbps_job_active": 125.33463569510914,
+        "dispatch_gbps_per_rank_median": 22.51682255364544,
+        "combine_gbps_per_rank_median": 49.3039693120934,
+        "dispatch_gbps_per_rank_median_active": 22.632610744593006,
+        "combine_gbps_per_rank_median_active": 57.079556575437024
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_hidden_4096",
+      "slug": "ws4_ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "path": "results/sweeps/ws4/by_hidden/ws4_ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_hidden_4096",
+        "m": 8192,
+        "k": 4096,
+        "n": 4096,
+        "e": 8,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 2048
+      },
+      "sweep_value": 4096,
+      "bandwidth": {
+        "dispatch_gbps_job": 157.26354192704548,
+        "combine_gbps_job": 220.05160856645148,
+        "dispatch_gbps_job_active": 157.65303496503495,
+        "combine_gbps_job_active": 217.95226306708616,
+        "dispatch_gbps_per_rank_median": 39.56402530896386,
+        "combine_gbps_per_rank_median": 83.12657668160021,
+        "dispatch_gbps_per_rank_median_active": 39.645503732697534,
+        "combine_gbps_per_rank_median_active": 93.11341060392392
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_hidden_6144",
+      "slug": "ws4_ep8_hidden6144_imhidden3072_numtokens8192_topk8",
+      "path": "results/sweeps/ws4/by_hidden/ws4_ep8_hidden6144_imhidden3072_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_hidden_6144",
+        "m": 8192,
+        "k": 6144,
+        "n": 6144,
+        "e": 8,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 3072
+      },
+      "sweep_value": 6144,
+      "bandwidth": {
+        "dispatch_gbps_job": 224.20735964547845,
+        "combine_gbps_job": 299.12020354721886,
+        "dispatch_gbps_job_active": 225.26803172394602,
+        "combine_gbps_job_active": 301.7824125913435,
+        "dispatch_gbps_per_rank_median": 56.25993212344478,
+        "combine_gbps_per_rank_median": 110.33617122285949,
+        "dispatch_gbps_per_rank_median_active": 56.39674972380949,
+        "combine_gbps_per_rank_median_active": 121.91449387346898
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_hidden_7168",
+      "slug": "ws4_ep8_hidden7168_imhidden3584_numtokens8192_topk8",
+      "path": "results/sweeps/ws4/by_hidden/ws4_ep8_hidden7168_imhidden3584_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_hidden_7168",
+        "m": 8192,
+        "k": 7168,
+        "n": 7168,
+        "e": 8,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 3584
+      },
+      "sweep_value": 7168,
+      "bandwidth": {
+        "dispatch_gbps_job": 252.90590915181562,
+        "combine_gbps_job": 315.2236524073142,
+        "dispatch_gbps_job_active": 254.0291790040377,
+        "combine_gbps_job_active": 307.91449274887344,
+        "dispatch_gbps_per_rank_median": 63.44625792202052,
+        "combine_gbps_per_rank_median": 116.0177233315746,
+        "dispatch_gbps_per_rank_median_active": 63.64521209959079,
+        "combine_gbps_per_rank_median_active": 127.2420039473456
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_hidden_7680",
+      "slug": "ws4_ep8_hidden7680_imhidden3840_numtokens8192_topk8",
+      "path": "results/sweeps/ws4/by_hidden/ws4_ep8_hidden7680_imhidden3840_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_hidden_7680",
+        "m": 8192,
+        "k": 7680,
+        "n": 7680,
+        "e": 8,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 3840
+      },
+      "sweep_value": 7680,
+      "bandwidth": {
+        "dispatch_gbps_job": 263.9924951684513,
+        "combine_gbps_job": 328.4015855150477,
+        "dispatch_gbps_job_active": 265.0307456738332,
+        "combine_gbps_job_active": 332.08510020618553,
+        "dispatch_gbps_per_rank_median": 66.223954952901,
+        "combine_gbps_per_rank_median": 118.88229871760333,
+        "dispatch_gbps_per_rank_median_active": 66.57289095342179,
+        "combine_gbps_per_rank_median_active": 131.08373283518466
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_hidden_7936",
+      "slug": "ws4_ep8_hidden7936_imhidden3968_numtokens8192_topk8",
+      "path": "results/sweeps/ws4/by_hidden/ws4_ep8_hidden7936_imhidden3968_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_hidden_7936",
+        "m": 8192,
+        "k": 7936,
+        "n": 7936,
+        "e": 8,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 3968
+      },
+      "sweep_value": 7936,
+      "bandwidth": {
+        "dispatch_gbps_job": 277.1713630573248,
+        "combine_gbps_job": 334.3041594086454,
+        "dispatch_gbps_job_active": 278.16798401917697,
+        "combine_gbps_job_active": 324.1974106280193,
+        "dispatch_gbps_per_rank_median": 69.50036954870312,
+        "combine_gbps_per_rank_median": 121.22548669579572,
+        "dispatch_gbps_per_rank_median_active": 69.70608518930052,
+        "combine_gbps_per_rank_median_active": 131.81880050270462
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_hidden_7968",
+      "slug": "ws4_ep8_hidden7968_imhidden3984_numtokens8192_topk8",
+      "path": "results/sweeps/ws4/by_hidden/ws4_ep8_hidden7968_imhidden3984_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_hidden_7968",
+        "m": 8192,
+        "k": 7968,
+        "n": 7968,
+        "e": 8,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 3984
+      },
+      "sweep_value": 7968,
+      "bandwidth": {
+        "dispatch_gbps_job": 278.91368533049604,
+        "combine_gbps_job": 320.3624834355828,
+        "dispatch_gbps_job_active": 280.44289917090134,
+        "combine_gbps_job_active": 317.24838882138516,
+        "dispatch_gbps_per_rank_median": 70.27423833375065,
+        "combine_gbps_per_rank_median": 118.51167418308816,
+        "dispatch_gbps_per_rank_median_active": 70.50622777612267,
+        "combine_gbps_per_rank_median_active": 130.26330057407037
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_hidden_8000",
+      "slug": "ws4_ep8_hidden8000_imhidden4000_numtokens8192_topk8",
+      "path": "results/sweeps/ws4/by_hidden/ws4_ep8_hidden8000_imhidden4000_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_hidden_8000",
+        "m": 8192,
+        "k": 8000,
+        "n": 8000,
+        "e": 8,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 4000
+      },
+      "sweep_value": 8000,
+      "bandwidth": {
+        "dispatch_gbps_job": 277.5561044028474,
+        "combine_gbps_job": 329.71495951576134,
+        "dispatch_gbps_job_active": 278.58436200052927,
+        "combine_gbps_job_active": 321.7971459260396,
+        "dispatch_gbps_per_rank_median": 70.2277526308489,
+        "combine_gbps_per_rank_median": 119.9392774576396,
+        "dispatch_gbps_per_rank_median_active": 70.29821622115279,
+        "combine_gbps_per_rank_median_active": 131.28620511913755
+      },
+      "status": "ok"
+    }
+  ],
+  "failures": [],
+  "expert_per_rank": 8
+}

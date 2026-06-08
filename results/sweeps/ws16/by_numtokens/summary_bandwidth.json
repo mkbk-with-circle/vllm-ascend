@@ -1,0 +1,62 @@
+{
+  "axis": "numtokens",
+  "world_size": 16,
+  "expert_per_rank": 8,
+  "hardware": "Ascend910 (ascend910_9391, 8\u00d7HCCS_SW), ws=16",
+  "theoretical_hccs_gbps_per_rank": 392.0,
+  "theoretical_hccs_gbps_job": 6272.0,
+  "peaks": {
+    "dispatch_gbps_job": 1914.4280088456437,
+    "dispatch_gbps_job_at": 16384,
+    "combine_gbps_job": 2375.5350088495575,
+    "combine_gbps_job_at": 1024,
+    "dispatch_gbps_per_rank_median": 121.03017126922816,
+    "dispatch_gbps_per_rank_median_at": 16384,
+    "combine_gbps_per_rank_median": 156.79779965005787,
+    "combine_gbps_per_rank_median_at": 1024
+  },
+  "points": [
+    {
+      "x": 1024,
+      "slug": "ws16_ep8_hidden4096_imhidden2048_numtokens1024_topk8",
+      "dispatch_gbps_job": 1624.8204684684683,
+      "combine_gbps_job": 2375.5350088495575,
+      "dispatch_gbps_per_rank_median": 104.10642438604873,
+      "combine_gbps_per_rank_median": 156.79779965005787
+    },
+    {
+      "x": 2048,
+      "slug": "ws16_ep8_hidden4096_imhidden2048_numtokens2048_topk8",
+      "dispatch_gbps_job": 1704.1424125984254,
+      "combine_gbps_job": 2365.0700969163,
+      "dispatch_gbps_per_rank_median": 109.70456653340949,
+      "combine_gbps_per_rank_median": 151.2470358720836
+    },
+    {
+      "x": 4096,
+      "slug": "ws16_ep8_hidden4096_imhidden2048_numtokens4096_topk8",
+      "dispatch_gbps_job": 1802.0490124895919,
+      "combine_gbps_job": 2289.428196162047,
+      "dispatch_gbps_per_rank_median": 114.00872874629212,
+      "combine_gbps_per_rank_median": 148.52435216400085
+    },
+    {
+      "x": 8192,
+      "slug": "ws16_ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "dispatch_gbps_job": 1868.9644766839376,
+      "combine_gbps_job": 2317.2200140275154,
+      "dispatch_gbps_per_rank_median": 118.3827496095009,
+      "combine_gbps_per_rank_median": 148.5007512994236
+    },
+    {
+      "x": 16384,
+      "slug": "ws16_ep8_hidden4096_imhidden2048_numtokens16384_topk8",
+      "dispatch_gbps_job": 1914.4280088456437,
+      "combine_gbps_job": 2371.599832136941,
+      "dispatch_gbps_per_rank_median": 121.03017126922816,
+      "combine_gbps_per_rank_median": 150.89178392907036
+    }
+  ],
+  "failures": [],
+  "notes": {}
+}

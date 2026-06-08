@@ -1,0 +1,31 @@
+---
+description: 修改 mc2/kernel 源码后，编译下发前必须验证补丁已落盘
+globs: vllm-ascend/csrc/mc2/**/*.{hpp,h,cpp},vllm-ascend/tools/dffc_profile/_patch*.py
+alwaysApply: false
+---
+
+# 编译前验证源码修改
+
+修改 `dispatch_ffn_combine` 等 Ascend 算子 kernel/host 后，**在 `rebuild_mc2.sh` 或 pip 重装之前**，必须确认补丁已写入目标文件，避免“以为改了、实际未生效”。
+
+## 必做检查
+
+1. **grep 锚点符号**：对新增函数/成员/关键调用做 `grep`，确认存在且仅一处（无旧代码残留）。
+2. **禁止新旧并存**：若 patch 目标是替换 `DffcProfileExpertWallBegin` 为成员数组写法，grep 旧模式应为 0（或仅在 AIV dispatch 等非目标路径）。
+3. **跑 patch 脚本时**：脚本应 `raise`/`exit(1)`  on MISSING；执行后打印 `OK <name>` 逐条核对。
+4. **行数/片段抽查**：`sed -n '起始,结束p' kernel.hpp` 目视关键循环体，不只看 grep 命中行号。
+
+## 示例（GMM expert flush）
+
+```bash
+# 应有
+grep -c 'DffcGmmExpertsProfileFlushToGm' csrc/mc2/dispatch_ffn_combine/op_kernel/dispatch_ffn_combine_kernel.hpp  # >=2
+grep -c 'gmm1ExpWallBeg_' ...  # 成员 + 循环更新
+
+# GMM1 循环内不应再直接写 GM（应写成员数组）
+grep 'DffcProfileExpertWallBegin.*GMM1' ...  # 仅 flush 函数内
+```
+
+## 编译后
+
+- 用**单 case、单 rank 抽查** `raw` v9 槽位（如 gmm1 phase_idx=2 共 8 expert）再跑全 EP sweep。

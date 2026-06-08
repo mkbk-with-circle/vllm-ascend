@@ -1,0 +1,48 @@
+{
+  "axis": "numtokens",
+  "world_size": 8,
+  "ep": 8,
+  "hardware": "Ascend910 (ascend910_9391, 8\u00d7HCCS_SW), ws=8",
+  "theoretical_hccs_gbps_per_rank": 392.0,
+  "theoretical_hccs_gbps_job": 3136.0,
+  "peaks": {
+    "dispatch_gbps_job": 587.5555487986968,
+    "dispatch_gbps_job_at": 16384,
+    "combine_gbps_job": 783.4672192630427,
+    "combine_gbps_job_at": 8192
+  },
+  "points": [
+    {
+      "x": 1024,
+      "slug": "ws8_ep8_hidden4096_imhidden2048_numtokens1024_topk8",
+      "dispatch_gbps_job": 557.7991917525774,
+      "combine_gbps_job": 780.3356279069767
+    },
+    {
+      "x": 2048,
+      "slug": "ws8_ep8_hidden4096_imhidden2048_numtokens2048_topk8",
+      "dispatch_gbps_job": 553.2364171779141,
+      "combine_gbps_job": 765.8643537803139
+    },
+    {
+      "x": 4096,
+      "slug": "ws8_ep8_hidden4096_imhidden2048_numtokens4096_topk8",
+      "dispatch_gbps_job": 566.8572194866422,
+      "combine_gbps_job": 777.22897140789
+    },
+    {
+      "x": 8192,
+      "slug": "ws8_ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "dispatch_gbps_job": 575.4482488699814,
+      "combine_gbps_job": 783.4672192630427
+    },
+    {
+      "x": 16384,
+      "slug": "ws8_ep8_hidden4096_imhidden2048_numtokens16384_topk8",
+      "dispatch_gbps_job": 587.5555487986968,
+      "combine_gbps_job": 783.4672192630427
+    }
+  ],
+  "failures": [],
+  "notes": {}
+}

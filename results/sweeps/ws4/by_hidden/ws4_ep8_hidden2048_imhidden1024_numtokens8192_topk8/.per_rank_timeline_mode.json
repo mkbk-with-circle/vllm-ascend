@@ -1,0 +1,5 @@
+{
+  "pack_aic_intra_phase": false,
+  "mode": "pack_intra_wall",
+  "backup_tag_serial": "pack_intra_serial"
+}

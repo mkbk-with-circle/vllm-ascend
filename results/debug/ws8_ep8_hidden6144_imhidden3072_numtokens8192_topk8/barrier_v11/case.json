@@ -1,0 +1,14 @@
+{
+  "name": "debug_ws8_ep8_hidden6144_imhidden3072_numtokens8192_topk8",
+  "m": 8192,
+  "k": 6144,
+  "n": 6144,
+  "e": 8,
+  "topk": 8,
+  "max_output_size": 78644,
+  "imhidden": 3072,
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  }
+}

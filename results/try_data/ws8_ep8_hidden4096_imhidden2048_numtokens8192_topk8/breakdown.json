@@ -1,0 +1,106 @@
+{
+  "t0_us": 0,
+  "phases": {
+    "prep": {
+      "begin_us_mean": 0,
+      "begin_us_median": 0.0,
+      "begin_us_max": 0,
+      "begin_us_min": 0,
+      "end_us_max": 32490,
+      "duration_us_mean": 17626.625,
+      "duration_us_median": 19012.0,
+      "duration_us_max": 32490,
+      "timeline_start_us": 0.0,
+      "timeline_duration_us": 32490,
+      "timeline_end_us": 32490.0
+    },
+    "dispatch": {
+      "begin_us_mean": 17627,
+      "begin_us_median": 19012.0,
+      "begin_us_max": 32490,
+      "begin_us_min": 567,
+      "end_us_max": 35619,
+      "duration_us_mean": 3109.125,
+      "duration_us_median": 3110.5,
+      "duration_us_max": 3129,
+      "timeline_start_us": 19012.0,
+      "timeline_duration_us": 3129,
+      "timeline_end_us": 22141.0
+    },
+    "swiglu": {
+      "begin_us_mean": 21499.375,
+      "begin_us_median": 22887.0,
+      "begin_us_max": 36357,
+      "begin_us_min": 4450,
+      "end_us_max": 38248,
+      "duration_us_mean": 1887.125,
+      "duration_us_median": 1888.5,
+      "duration_us_max": 1899,
+      "timeline_start_us": 22887.0,
+      "timeline_duration_us": 1899,
+      "timeline_end_us": 24786.0
+    },
+    "combine": {
+      "begin_us_mean": 27167.25,
+      "begin_us_median": 28554.0,
+      "begin_us_max": 42019,
+      "begin_us_min": 10124,
+      "end_us_max": 45843,
+      "duration_us_mean": 5022.75,
+      "duration_us_median": 5421.0,
+      "duration_us_max": 5457,
+      "timeline_start_us": 42019,
+      "timeline_duration_us": 5457,
+      "timeline_end_us": 34011.0
+    },
+    "gmm1": {
+      "begin_us_mean": 20736.125,
+      "begin_us_median": 22119.5,
+      "begin_us_max": 35619,
+      "begin_us_min": 3688,
+      "end_us_max": 39569,
+      "duration_us_mean": 3967.375,
+      "duration_us_median": 3966.0,
+      "duration_us_max": 3980,
+      "timeline_start_us": 3688,
+      "timeline_duration_us": 35881,
+      "timeline_end_us": 39569
+    },
+    "gmm2": {
+      "begin_us_mean": 24703.5,
+      "begin_us_median": 26091.0,
+      "begin_us_max": 39569,
+      "begin_us_min": 7654,
+      "end_us_max": 42019,
+      "duration_us_mean": 2463.75,
+      "duration_us_median": 2464.5,
+      "duration_us_max": 2471,
+      "timeline_start_us": 7654,
+      "timeline_duration_us": 34365,
+      "timeline_end_us": 42019
+    }
+  },
+  "anomalies": [],
+  "num_ranks": 8,
+  "valid_ranks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "profile_version": 5,
+  "case_params": {
+    "name": "S2",
+    "m": 8192,
+    "k": 4096,
+    "n": 4096,
+    "e": 2,
+    "topk": 8,
+    "max_output_size": 65536,
+    "imhidden": 2048
+  }
+}

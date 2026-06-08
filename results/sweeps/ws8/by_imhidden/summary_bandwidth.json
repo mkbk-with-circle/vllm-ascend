@@ -1,0 +1,36 @@
+{
+  "axis": "imhidden",
+  "world_size": 8,
+  "ep": 8,
+  "hardware": "Ascend910 (ascend910_9391, 8\u00d7HCCS_SW), ws=8",
+  "theoretical_hccs_gbps_per_rank": 392.0,
+  "theoretical_hccs_gbps_job": 3136.0,
+  "peaks": {
+    "dispatch_gbps_job": 577.4442006403415,
+    "dispatch_gbps_job_at": 3072,
+    "combine_gbps_job": 793.8941397412199,
+    "combine_gbps_job_at": 3072
+  },
+  "points": [
+    {
+      "x": 1024,
+      "slug": "ws8_ep8_hidden4096_imhidden1024_numtokens8192_topk8",
+      "dispatch_gbps_job": 574.0744997347481,
+      "combine_gbps_job": 777.9328556420938
+    },
+    {
+      "x": 2048,
+      "slug": "ws8_ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "dispatch_gbps_job": 576.0609166888474,
+      "combine_gbps_job": 785.1859773308959
+    },
+    {
+      "x": 3072,
+      "slug": "ws8_ep8_hidden4096_imhidden3072_numtokens8192_topk8",
+      "dispatch_gbps_job": 577.4442006403415,
+      "combine_gbps_job": 793.8941397412199
+    }
+  ],
+  "failures": [],
+  "notes": {}
+}
