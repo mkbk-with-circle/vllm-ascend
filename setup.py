@@ -344,6 +344,15 @@ class cmake_build_ext(build_ext):
         if envs.VLLM_ASCEND_ENABLE_BATCH_MEMCPY is not None:
             cmake_args += [f"-DVLLM_ASCEND_ENABLE_BATCH_MEMCPY={envs.VLLM_ASCEND_ENABLE_BATCH_MEMCPY}"]
 
+        # dispatch_ffn_combine 分阶段打点（tools/dffc_profile）
+        if os.environ.get("DISPATCH_FFN_COMBINE_PROFILE", "").strip().lower() in (
+            "1",
+            "on",
+            "true",
+            "yes",
+        ):
+            cmake_args += ["-DDISPATCH_FFN_COMBINE_PROFILE=ON"]
+
         build_tool = []
         # TODO(ganyi): ninja and ccache support for ascend c auto codegen. now we can only use make build
         # if which('ninja') is not None:
