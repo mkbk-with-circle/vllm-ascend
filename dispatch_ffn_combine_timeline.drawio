@@ -1,0 +1,115 @@
+<mxfile host="65bd71144e">
+    <diagram id="timeline" name="AIC-AIV流水线">
+        <mxGraphModel dx="1211" dy="851" grid="0" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1220" pageHeight="720" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="0" y="0" width="1220" height="720" as="geometry"/>
+                </mxCell>
+                <mxCell id="title" value="dispatch_ffn_combine 执行时间线（按 expert 组流水，箭头为时间 →）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="900" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_aiv" value="AIV（Vector）" style="text;html=1;strokeColor=none;fillColor=none;align=right;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="20" y="70" width="100" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_aic" value="AIC（Cube）" style="text;html=1;strokeColor=none;fillColor=none;align=right;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="20" y="200" width="100" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="axis" value="" style="endArrow=classic;html=1;strokeWidth=2" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="320" as="sourcePoint"/>
+                        <mxPoint x="1195" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="axis_t" value="时间 →" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#444444" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="308" width="88" height="28" as="geometry"/>
+                </mxCell>
+                <!-- AIV -->
+                <mxCell id="aiv0" value="准备&#xa;mask / InitRouting&#xa;SyncAll" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" parent="1" vertex="1">
+                    <mxGeometry x="130" y="60" width="100" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="aiv1" value="token 计数&#xa;Push+轮询+前缀和&#xa;SyncAll(卡内)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" parent="1" vertex="1">
+                    <mxGeometry x="245" y="60" width="120" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="aiv2" value="Pull&#xa;expert组0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" parent="1" vertex="1">
+                    <mxGeometry x="380" y="60" width="78" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="aiv3" value="Pull&#xa;expert组1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" parent="1" vertex="1">
+                    <mxGeometry x="468" y="60" width="78" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="aiv3b" value="Pull&#xa;expert组2…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" parent="1" vertex="1">
+                    <mxGeometry x="556" y="60" width="78" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="aiv4" value="SwiGLU&#xa;波次1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" parent="1" vertex="1">
+                    <mxGeometry x="644" y="60" width="82" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="aiv5" value="SwiGLU&#xa;波次2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366" parent="1" vertex="1">
+                    <mxGeometry x="736" y="60" width="82" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="aiv6a" value="Combine&#xa;组0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450" parent="1" vertex="1">
+                    <mxGeometry x="828" y="60" width="68" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="aiv6b" value="Combine&#xa;组1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450" parent="1" vertex="1">
+                    <mxGeometry x="906" y="60" width="68" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="aiv6c" value="Combine&#xa;组2…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450" parent="1" vertex="1">
+                    <mxGeometry x="984" y="60" width="68" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="aiv7" value="CrossRankSync&#xa;+ Unpermute" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" parent="1" vertex="1">
+                    <mxGeometry x="1068" y="60" width="120" height="56" as="geometry"/>
+                </mxCell>
+                <!-- AIC：GMM1 组0 在 Pull组1 正下方（等 Pull组0 结束） -->
+                <mxCell id="aic0" value="等 cumsum&#xa;flag(0)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666" parent="1" vertex="1">
+                    <mxGeometry x="245" y="190" width="90" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="aic1" value="GMM1&#xa;组0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" parent="1" vertex="1">
+                    <mxGeometry x="468" y="190" width="78" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="aic2" value="GMM1&#xa;组1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" parent="1" vertex="1">
+                    <mxGeometry x="556" y="190" width="78" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="aic2b" value="GMM1&#xa;组2…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" parent="1" vertex="1">
+                    <mxGeometry x="644" y="190" width="82" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="aic3" value="GMM2&#xa;组0" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" parent="1" vertex="1">
+                    <mxGeometry x="736" y="190" width="68" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="aic3b" value="GMM2&#xa;组1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" parent="1" vertex="1">
+                    <mxGeometry x="814" y="190" width="68" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="aic3c" value="GMM2&#xa;组2…" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00" parent="1" vertex="1">
+                    <mxGeometry x="892" y="190" width="68" height="50" as="geometry"/>
+                </mxCell>
+                <!-- 交叠虚线框 -->
+                <mxCell id="ov1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82b366;strokeWidth=2;dashed=1;dashPattern=8 8" parent="1" vertex="1">
+                    <mxGeometry x="375" y="52" width="175" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="ov1t" value="Pull组i 与 GMM1组(i−1) 交叠（组0 等 Pull0 后在 Pull1 下开算）" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#3d6b32;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="380" y="254" width="360" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ov2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;strokeWidth=2;dashed=1;dashPattern=8 8" parent="1" vertex="1">
+                    <mxGeometry x="548" y="52" width="190" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="ov2t" value="后半段 GMM1 ↔ SwiGLU 波次1" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#2f4f73;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="560" y="274" width="240" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="ov3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#d79b00;strokeWidth=2;dashed=1;dashPattern=8 8" parent="1" vertex="1">
+                    <mxGeometry x="728" y="52" width="330" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="ov3t" value="SwiGLU 波次2 ↔ GMM2 前期；GMM2 组 i ↔ Combine 组 i（Combine 在全部 SwiGLU 之后才开始）" style="text;html=1;strokeColor=none;fillColor=none;fontColor=#8b6508;fontSize=14;fontStyle=1" parent="1" vertex="1">
+                    <mxGeometry x="735" y="294" width="360" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend" value="图例：蓝=路由/同步  黄=Pull  橙=GEMM  绿=SwiGLU  红=Combine  紫=全 rank 收尾&#xa;竖向对齐：GMM1组k 在 Pull组(k+1) 下方；后半 GMM1 与 SwiGLU1 同窗；SwiGLU2 与 GMM2 前期同窗" style="text;html=1;strokeColor=#999999;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=8;fontSize=12" parent="1" vertex="1">
+                    <mxGeometry x="130" y="332" width="1060" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="faq_title" value="语义说明（对照 dispatch_ffn_combine_kernel.hpp）" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#333333" parent="1" vertex="1">
+                    <mxGeometry x="40" y="390" width="400" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="faq_body" value="1. Pull 粒度与语义&#xa;   是。AIV 按本地 expert 组 groupIdx（0…expertPerRank−1）串行 Pull；每组内多核按 dstEpIdx 分片，CopyGMToGMPerToken 从远端 peermem(offsetA) 读到本地 gmA。这是 pull 语义（主动读 peer GM），不是 HCCL all2all。&#xa;&#xa;2. Pull 与 GMM1 启动关系&#xa;   基本对。每完成一组 Pull → SyncAll → CrossCoreSetFlag；AIC GMM1 在算 groupIdx 前 CrossCoreWaitFlag，故「Pull 组 i 完成」后「GMM1 组 i」才可开算，并与 Pull 组 i+1 流水交叠。&#xa;&#xa;3. SwiGLU 的 wave 粒度&#xa;   SwiGLU 按 wave（由 epilogueGranularity 切分），每 wave 一次 blockEpilogue1，不是 per-expert 单独 SwiGLU。&#xa;   · 波次1：前 epilogueGranularity 个 expert 的 GMM1 完成即发 SYNCFLAGC2V（可与后续 GMM1 交叠），不必等全部 GMM1。&#xa;   · 波次2：全部 GMM1 结束后再发 SYNCFLAGC2V；仅当 epilogueGranularity &amp;lt; expertPerRank 时存在。&#xa;   · 当前实现硬编码最多 2 波 SwiGLU；epilogueGranularity 可调切分点，但不能拆成 3+ 波而不改代码。&#xa;&#xa;4. SwiGLU 与 GMM2 关系&#xa;   部分对。AIC 在整段 GMM1 结束后等 SYNCFLAGV2C（波次1 SwiGLU 完成）再进入 GMM2()；GMM2 仍按 groupIdx 逐组算，不是「每个 expert SwiGLU 完立刻 GMM2」。&#xa;   后半段 expert 的 GMM2 在 groupIdx 边界处再等第二次 SYNCFLAGV2C（波次2 SwiGLU 完成）；可与 AIV 波次2 SwiGLU 交叠。&#xa;&#xa;5. Combine scatter 粒度&#xa;   CombineV1（M×topK&amp;gt;4096）：按本地 expert 组串行；每组内多核按 dstEpIdx scatter 到远端 peermem(offsetD)。即通信 scatter 调度粒度是「逐个 expert 组」。&#xa;   CombineV2（小 batch）：仍按 expert 组，组内再按 GEMM tile 细切。&#xa;   Combine 在全部 SwiGLU 结束后才开始；每组 Combine 等对应 GMM2 组 CrossCoreWaitFlag。" style="text;html=1;strokeColor=#cccccc;fillColor=#fafafa;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fontSize=11;fontColor=#222222;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="418" width="1140" height="280" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,0 +1,24 @@
+# dev 镜像构建：尽量缩小 context，减轻 Mac Docker VM 压力
+.git
+**/__pycache__
+**/*.pyc
+*.egg-info
+build/
+dist/
+csrc/build/
+csrc/build_out/
+csrc/output/
+vllm_ascend/_cann_ops_custom/
+offline-a3-bundle/images/
+vllm-ascend-a3-offline-*.tar.gz
+*.tar.gz
+!offline-a3-bundle/sources/*.tar.gz
+# 与 dev 镜像无关的大目录
+tests/
+docs/
+benchmarks/
+examples/
+.github/
+.agents/
+*.md
+!tools/offline-a3-dev/README.md
