@@ -45,6 +45,7 @@ struct CoCTiling {
     int32_t commDataSplit = -1;
     int32_t lenPerLoop = -1;
     uint64_t initRoutingQuantTilingKey;
+    uint64_t profileGmOffset = 0;  // workspace 内 profile GM 区偏移（字节）
     optiling::MoeInitRoutingQuantV2TilingData moeInitRoutingQuantV2TilingData;
 };
 

@@ -304,7 +304,14 @@ static ge::graphStatus DispatchFFNCombineTilingFuncImpl(gert::TilingContext *con
                             info.worldSize  * sizeof(int32_t) * 16 +
                             (info.expertPerRank + info.worldSize) * sizeof(int32_t) * 16;
 
-    workSpaces[0] = SYSTEM_NEED_WORKSPACE + std::max(cocWorkspace, initRoutingWorkspace);
+    uint64_t userWorkspace = std::max(cocWorkspace, initRoutingWorkspace);
+#if DISPATCH_FFN_COMBINE_PROFILE
+    // profile 区固定在 user workspace 尾部，与 kernel profileStageBuf_ 对齐
+    constexpr uint64_t kDffcProfileGmBytes = 256U;
+    tilingData->cocTiling.profileGmOffset = userWorkspace;
+    userWorkspace += kDffcProfileGmBytes;
+#endif
+    workSpaces[0] = SYSTEM_NEED_WORKSPACE + userWorkspace;
 
 
     // 5. communication

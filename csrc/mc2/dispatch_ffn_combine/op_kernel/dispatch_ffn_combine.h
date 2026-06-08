@@ -106,6 +106,7 @@ private:
 
     optiling::MoeInitRoutingQuantV2TilingData moeInitRoutingQuantV2TilingData;
     uint64_t initRoutingQuantTilingKey;
+    uint64_t profileGmOffset;
 
     // Hccl<HCCL_SERVER_TYPE_AICPU> hccl_;
 
@@ -157,6 +158,7 @@ __aicore__ inline void DispatchFFNCombine<TemplateMMA2ACFunc>::Init(GM_ADDR xGM,
     lenPerLoop = tilingData.cocTiling.lenPerLoop;
     moeInitRoutingQuantV2TilingData = tilingData.cocTiling.moeInitRoutingQuantV2TilingData;
     initRoutingQuantTilingKey = tilingData.cocTiling.initRoutingQuantTilingKey;
+    profileGmOffset = tilingData.cocTiling.profileGmOffset;
 
     auto contextGM0 = AscendC::GetHcclContext<HCCL_GROUP_ID_0>();
     __gm__ HcclOpResParamCustom *WinContext_{nullptr};
@@ -279,7 +281,8 @@ __aicore__ inline void DispatchFFNCombine<TemplateMMA2ACFunc>::Process()
         outGM_, layoutD1, layoutD2,
         expertIdGM_, moeInitRoutingQuantV2Scale, moeInitRoutingQuantV2Offset,
         expertTokensBeforeCapacity, probs_,
-        workspaceGM_, gmExpertTokenNums_, ubMoveNum, xActiveMaskGM_, moeInitRoutingQuantV2TilingData};
+        workspaceGM_, gmExpertTokenNums_, ubMoveNum, xActiveMaskGM_, moeInitRoutingQuantV2TilingData,
+        profileGmOffset};
     //Call kernel
     MatmulKernel kernel(params);
     kernel(params);

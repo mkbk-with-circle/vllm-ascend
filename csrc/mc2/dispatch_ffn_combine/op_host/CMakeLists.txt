@@ -1,4 +1,10 @@
+option(DISPATCH_FFN_COMBINE_PROFILE "Enable dispatch_ffn_combine stage profiling" OFF)
+
 set(_DISPATCH_FFN_INC_OPTS)
+set(_DISPATCH_FFN_PROFILE_OPTS)
+if (DISPATCH_FFN_COMBINE_PROFILE)
+    list(APPEND _DISPATCH_FFN_PROFILE_OPTS -DDISPATCH_FFN_COMBINE_PROFILE=1)
+endif()
 if (EXISTS ${ASCEND_CANN_PACKAGE_PATH}/aarch64-linux/ascendc/include)
     list(APPEND _DISPATCH_FFN_INC_OPTS -I${ASCEND_CANN_PACKAGE_PATH}/aarch64-linux/ascendc/include)
 elseif (EXISTS ${ASCEND_CANN_PACKAGE_PATH}/arm64-linux/ascendc/include)
@@ -27,6 +33,7 @@ add_ops_compile_options(
         -DHCCL_COMM
         -DCATLASS_ARCH=2201
         ${_DISPATCH_FFN_INC_OPTS}
+        ${_DISPATCH_FFN_PROFILE_OPTS}
 )
 
 if (NOT BUILD_OPS_RTY_KERNEL)
@@ -35,4 +42,7 @@ if (NOT BUILD_OPS_RTY_KERNEL)
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${CMAKE_CURRENT_SOURCE_DIR}/../op_kernel
     )
+    if (DISPATCH_FFN_COMBINE_PROFILE)
+        target_compile_definitions(${OPHOST_NAME}_tiling_obj PRIVATE DISPATCH_FFN_COMBINE_PROFILE=1)
+    endif()
 endif()
