@@ -1,0 +1,109 @@
+{
+  "t0_us": 0,
+  "phases": {
+    "prep": {
+      "begin_us_mean": 0,
+      "begin_us_median": 0.0,
+      "begin_us_max": 0,
+      "begin_us_min": 0,
+      "end_us_max": 23652,
+      "duration_us_mean": 8603,
+      "duration_us_median": 3991.5,
+      "duration_us_max": 23652,
+      "timeline_start_us": 0.0,
+      "timeline_duration_us": 23652,
+      "timeline_end_us": 23652.0
+    },
+    "dispatch": {
+      "begin_us_mean": 8603.125,
+      "begin_us_median": 3991.5,
+      "begin_us_max": 23653,
+      "begin_us_min": 128,
+      "end_us_max": 24049,
+      "duration_us_mean": 398.375,
+      "duration_us_median": 398.0,
+      "duration_us_max": 407,
+      "timeline_start_us": 3991.5,
+      "timeline_duration_us": 407,
+      "timeline_end_us": 4398.5
+    },
+    "swiglu": {
+      "begin_us_mean": 9106.875,
+      "begin_us_median": 4490.5,
+      "begin_us_max": 24148,
+      "begin_us_min": 644,
+      "end_us_max": 24343,
+      "duration_us_mean": 200,
+      "duration_us_median": 198.5,
+      "duration_us_max": 217,
+      "timeline_start_us": 4490.5,
+      "timeline_duration_us": 217,
+      "timeline_end_us": 4707.5
+    },
+    "combine": {
+      "begin_us_mean": 9660.375,
+      "begin_us_median": 5036.0,
+      "begin_us_max": 24701,
+      "begin_us_min": 1185,
+      "end_us_max": 25394,
+      "duration_us_mean": 624,
+      "duration_us_median": 677.0,
+      "duration_us_max": 696,
+      "timeline_start_us": 5036.0,
+      "timeline_duration_us": 696,
+      "timeline_end_us": 5732.0
+    },
+    "gmm1": {
+      "begin_us_mean": 0,
+      "begin_us_median": 0.0,
+      "begin_us_max": 0,
+      "begin_us_min": 0,
+      "end_us_max": 0,
+      "duration_us_mean": 0,
+      "duration_us_median": 0.0,
+      "duration_us_max": 0,
+      "timeline_start_us": 0.0,
+      "timeline_duration_us": 0,
+      "timeline_end_us": 0.0
+    },
+    "gmm2": {
+      "begin_us_mean": 0,
+      "begin_us_median": 0.0,
+      "begin_us_max": 0,
+      "begin_us_min": 0,
+      "end_us_max": 0,
+      "duration_us_mean": 0,
+      "duration_us_median": 0.0,
+      "duration_us_max": 0,
+      "timeline_start_us": 0.0,
+      "timeline_duration_us": 0,
+      "timeline_end_us": 0.0
+    }
+  },
+  "anomalies": [
+    "gmm1",
+    "gmm2"
+  ],
+  "num_ranks": 8,
+  "valid_ranks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "profile_version": 5,
+  "case_params": {
+    "name": "S1",
+    "m": 1024,
+    "k": 4096,
+    "n": 4096,
+    "e": 2,
+    "topk": 8,
+    "max_output_size": 16384,
+    "imhidden": 2048
+  }
+}

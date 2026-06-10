@@ -1,0 +1,141 @@
+{
+  "magic": 1146111555,
+  "version": 7,
+  "phases": {
+    "prep": {
+      "begin_us": 0,
+      "duration_us": 1151,
+      "end_us": 1151
+    },
+    "dispatch": {
+      "begin_us": 1152,
+      "duration_us": 3965,
+      "end_us": 5117
+    },
+    "swiglu": {
+      "begin_us": 12958,
+      "duration_us": 10769,
+      "end_us": 23727
+    },
+    "combine": {
+      "begin_us": 32850,
+      "duration_us": 5895,
+      "end_us": 38745
+    },
+    "gmm1": {
+      "begin_us": 3110,
+      "duration_us": 19482,
+      "end_us": 22592
+    },
+    "gmm2": {
+      "begin_us": 23727,
+      "duration_us": 9123,
+      "end_us": 32850
+    },
+    "swiglu_w1": {
+      "begin_us": 12571,
+      "duration_us": 1306,
+      "end_us": 13877
+    },
+    "swiglu_w2": {
+      "begin_us": 21895,
+      "duration_us": 1131,
+      "end_us": 23026
+    }
+  },
+  "rank": 3,
+  "case": "ep8_hidden6144_imhidden3072_numtokens8192_topk8",
+  "ep": 8,
+  "expert_token_nums": [
+    32818,
+    32976
+  ],
+  "case_params": {
+    "m": 8192,
+    "k": 6144,
+    "n": 6144,
+    "imhidden": 3072,
+    "e": 2,
+    "topk": 8,
+    "ep": 8,
+    "max_output_size": 78644
+  },
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  },
+  "n_valid_iters": {
+    "prep": 50,
+    "dispatch": 50,
+    "swiglu": 50,
+    "combine": 50,
+    "gmm1": 50,
+    "gmm2": 50
+  },
+  "raw": [
+    1146111555,
+    7,
+    838577693,
+    0,
+    1170,
+    1170,
+    3957,
+    12958,
+    10769,
+    27787,
+    5956,
+    3110,
+    19482,
+    23727,
+    9123,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    23727,
+    8363,
+    8364,
+    8364,
+    8366,
+    8369,
+    8371,
+    8374,
+    8374,
+    8380,
+    8381,
+    8390,
+    9089,
+    9063,
+    8966,
+    8964,
+    9094,
+    9119,
+    9120,
+    9122,
+    8377,
+    3110,
+    22592,
+    32850,
+    12958,
+    14260,
+    22596,
+    23727
+  ]
+}

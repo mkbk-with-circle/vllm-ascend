@@ -1,4 +1,11 @@
 option(DISPATCH_FFN_COMBINE_PROFILE "Enable dispatch_ffn_combine stage profiling" OFF)
+# 支持 build.sh / 环境变量开启，无需改 cmake 命令行
+if(DEFINED ENV{DISPATCH_FFN_COMBINE_PROFILE})
+    string(TOLOWER "$ENV{DISPATCH_FFN_COMBINE_PROFILE}" _dffc_profile_env)
+    if(_dffc_profile_env MATCHES "^(1|on|true|yes)$")
+        set(DISPATCH_FFN_COMBINE_PROFILE ON CACHE BOOL "" FORCE)
+    endif()
+endif()
 
 set(_DISPATCH_FFN_INC_OPTS)
 set(_DISPATCH_FFN_PROFILE_OPTS)

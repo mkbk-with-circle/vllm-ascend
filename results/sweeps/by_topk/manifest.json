@@ -1,0 +1,87 @@
+{
+  "axis": "topk",
+  "fixed": {
+    "m": 8192,
+    "k": 4096,
+    "n": 4096,
+    "e": 2
+  },
+  "values": [
+    4,
+    8,
+    16
+  ],
+  "ep": 8,
+  "cases": [
+    {
+      "case_name": "sweep_topk_4",
+      "slug": "ep8_hidden4096_imhidden2048_numtokens8192_topk4",
+      "path": "results/dffc/sweeps/by_topk/ep8_hidden4096_imhidden2048_numtokens8192_topk4",
+      "params": {
+        "name": "sweep_topk_4",
+        "m": 8192,
+        "k": 4096,
+        "n": 4096,
+        "e": 2,
+        "topk": 4,
+        "max_output_size": 39322,
+        "imhidden": 2048
+      },
+      "sweep_value": 4,
+      "bandwidth": {
+        "dispatch_gbps_job": 604.2045963149079,
+        "combine_gbps_job": 767.7810682874508,
+        "dispatch_gbps_per_rank_median": 76.68567576733446,
+        "combine_gbps_per_rank_median": 98.2185314048354
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_topk_8",
+      "slug": "ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "path": "results/dffc/sweeps/by_topk/ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_topk_8",
+        "m": 8192,
+        "k": 4096,
+        "n": 4096,
+        "e": 2,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 2048
+      },
+      "sweep_value": 8,
+      "bandwidth": {
+        "dispatch_gbps_job": 610.3386531302876,
+        "combine_gbps_job": 779.4858976406533,
+        "dispatch_gbps_per_rank_median": 76.60942294919504,
+        "combine_gbps_per_rank_median": 98.36331444123601
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_topk_16",
+      "slug": "ep8_hidden4096_imhidden2048_numtokens8192_topk16",
+      "path": "results/dffc/sweeps/by_topk/ep8_hidden4096_imhidden2048_numtokens8192_topk16",
+      "params": {
+        "name": "sweep_topk_16",
+        "m": 8192,
+        "k": 4096,
+        "n": 4096,
+        "e": 2,
+        "topk": 16,
+        "max_output_size": 157287,
+        "imhidden": 2048
+      },
+      "sweep_value": 16,
+      "bandwidth": {
+        "dispatch_gbps_job": 609.5650933671315,
+        "combine_gbps_job": 784.4689125114155,
+        "dispatch_gbps_per_rank_median": 76.68986928282048,
+        "combine_gbps_per_rank_median": 98.61421194950523
+      },
+      "status": "ok"
+    }
+  ],
+  "failures": []
+}

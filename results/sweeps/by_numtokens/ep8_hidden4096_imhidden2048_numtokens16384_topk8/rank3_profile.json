@@ -1,0 +1,141 @@
+{
+  "magic": 1146111555,
+  "version": 7,
+  "phases": {
+    "prep": {
+      "begin_us": 0,
+      "duration_us": 1612,
+      "end_us": 1612
+    },
+    "dispatch": {
+      "begin_us": 1612,
+      "duration_us": 7079,
+      "end_us": 8691
+    },
+    "swiglu": {
+      "begin_us": 12618,
+      "duration_us": 9416,
+      "end_us": 22034
+    },
+    "combine": {
+      "begin_us": 31625,
+      "duration_us": 11010,
+      "end_us": 42635
+    },
+    "gmm1": {
+      "begin_us": 4881,
+      "duration_us": 15316,
+      "end_us": 20197
+    },
+    "gmm2": {
+      "begin_us": 22034,
+      "duration_us": 9288,
+      "end_us": 31322
+    },
+    "swiglu_w1": {
+      "begin_us": 12849,
+      "duration_us": 2075,
+      "end_us": 14924
+    },
+    "swiglu_w2": {
+      "begin_us": 20479,
+      "duration_us": 1833,
+      "end_us": 22312
+    }
+  },
+  "rank": 3,
+  "case": "sweep_numtokens_16384",
+  "ep": 8,
+  "expert_token_nums": [
+    65269,
+    65978
+  ],
+  "case_params": {
+    "m": 16384,
+    "k": 4096,
+    "n": 4096,
+    "imhidden": 2048,
+    "e": 2,
+    "topk": 8,
+    "ep": 8,
+    "max_output_size": 157287
+  },
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  },
+  "n_valid_iters": {
+    "prep": 50,
+    "dispatch": 50,
+    "swiglu": 50,
+    "combine": 50,
+    "gmm1": 50,
+    "gmm2": 50
+  },
+  "raw": [
+    1146111555,
+    7,
+    1593948857,
+    0,
+    1433,
+    1434,
+    7061,
+    12618,
+    9416,
+    25832,
+    11061,
+    4881,
+    15316,
+    22034,
+    9288,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    22034,
+    7732,
+    9287,
+    9279,
+    8981,
+    8982,
+    9250,
+    9255,
+    9256,
+    9252,
+    7708,
+    7708,
+    0,
+    7707,
+    7707,
+    7706,
+    7709,
+    7702,
+    0,
+    7707,
+    7726,
+    4881,
+    20197,
+    31322,
+    12618,
+    14699,
+    20202,
+    22034
+  ]
+}

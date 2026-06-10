@@ -1,0 +1,125 @@
+{
+  "axis": "hidden",
+  "ep": 8,
+  "hardware": "Ascend910 (ascend910_9391, 8\u00d7HCCS_SW)",
+  "theoretical_hccs_gbps_per_rank": 392.0,
+  "theoretical_hccs_gbps_job": 3136.0,
+  "peaks": {
+    "dispatch_gbps_job": 973.6081708449397,
+    "dispatch_gbps_job_at": 7968,
+    "combine_gbps_job": 1140.1546899563318,
+    "combine_gbps_job_at": 7968,
+    "dispatch_gbps_per_rank_median": 122.8554036774113,
+    "dispatch_gbps_per_rank_median_at": 7968,
+    "combine_gbps_per_rank_median": 146.28105490894825,
+    "combine_gbps_per_rank_median_at": 7968
+  },
+  "points": [
+    {
+      "x": 2048,
+      "slug": "ep8_hidden2048_imhidden1024_numtokens8192_topk8",
+      "dispatch_gbps_job": 348.51998721636306,
+      "combine_gbps_job": 456.32886697832555,
+      "dispatch_gbps_per_rank_median": 43.80066854701006,
+      "combine_gbps_per_rank_median": 58.14546546186484
+    },
+    {
+      "x": 4096,
+      "slug": "ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "dispatch_gbps_job": 609.8227286559595,
+      "combine_gbps_job": 780.7611881476095,
+      "dispatch_gbps_per_rank_median": 76.62793565366401,
+      "combine_gbps_per_rank_median": 98.31847980446167
+    },
+    {
+      "x": 6144,
+      "slug": "ep8_hidden6144_imhidden3072_numtokens8192_topk8",
+      "dispatch_gbps_job": 812.9557338689431,
+      "combine_gbps_job": 1072.3120745672436,
+      "dispatch_gbps_per_rank_median": 102.1026396271386,
+      "combine_gbps_per_rank_median": 136.711946478906
+    },
+    {
+      "x": 7168,
+      "slug": "ep8_hidden7168_imhidden3584_numtokens8192_topk8",
+      "dispatch_gbps_job": 896.6445605700712,
+      "combine_gbps_job": 1083.8057343907715,
+      "dispatch_gbps_per_rank_median": 112.4762574912524,
+      "combine_gbps_per_rank_median": 136.96598353754152
+    },
+    {
+      "x": 7680,
+      "slug": "ep8_hidden7680_imhidden3840_numtokens8192_topk8",
+      "dispatch_gbps_job": 932.7125850057671,
+      "combine_gbps_job": 1106.0381376184591,
+      "dispatch_gbps_per_rank_median": 117.61151797588832,
+      "combine_gbps_per_rank_median": 139.4286264573115
+    },
+    {
+      "x": 7936,
+      "slug": "ep8_hidden7936_imhidden3968_numtokens8192_topk8",
+      "dispatch_gbps_job": 953.3379242355089,
+      "combine_gbps_job": 1135.4208126620276,
+      "dispatch_gbps_per_rank_median": 121.33988400028616,
+      "combine_gbps_per_rank_median": 144.08337310520727
+    },
+    {
+      "x": 7968,
+      "slug": "ep8_hidden7968_imhidden3984_numtokens8192_topk8",
+      "dispatch_gbps_job": 973.6081708449397,
+      "combine_gbps_job": 1140.1546899563318,
+      "dispatch_gbps_per_rank_median": 122.8554036774113,
+      "combine_gbps_per_rank_median": 146.28105490894825
+    },
+    {
+      "x": 8000,
+      "slug": "ep8_hidden8000_imhidden4000_numtokens8192_topk8",
+      "dispatch_gbps_job": 967.6197647058824,
+      "combine_gbps_job": 1121.4716577540107,
+      "dispatch_gbps_per_rank_median": 121.50169714052288,
+      "combine_gbps_per_rank_median": 143.20406544920075
+    }
+  ],
+  "failures": [
+    {
+      "slug": "ep8_hidden7984_imhidden3992_numtokens8192_topk8",
+      "sweep_value": 7984,
+      "error": "aicore exception (507015) / kernel limit"
+    },
+    {
+      "slug": "ep8_hidden8016_imhidden4008_numtokens8192_topk8",
+      "sweep_value": 8016,
+      "error": "aicore exception (507015) / kernel limit"
+    },
+    {
+      "slug": "ep8_hidden8064_imhidden4032_numtokens8192_topk8",
+      "sweep_value": 8064,
+      "error": "aicore exception (507015) / kernel limit"
+    },
+    {
+      "slug": "ep8_hidden8192_imhidden4096_numtokens8192_topk8",
+      "sweep_value": 8192,
+      "error": "aicore exception (507015) / kernel limit"
+    },
+    {
+      "slug": "ep8_hidden8448_imhidden4224_numtokens8192_topk8",
+      "sweep_value": 8448,
+      "error": "aicore exception (507015) / kernel limit"
+    },
+    {
+      "slug": "ep8_hidden10240_imhidden5120_numtokens8192_topk8",
+      "sweep_value": 10240,
+      "error": "aicore exception (507015) / kernel limit"
+    },
+    {
+      "slug": "ep8_hidden16384_imhidden8192_numtokens8192_topk8",
+      "sweep_value": 16384,
+      "error": "aicore exception (507015) / kernel limit"
+    }
+  ],
+  "notes": {
+    "max_ok_k_m8192": 8000,
+    "oom_reached": false,
+    "limit_reason": "K>=~8064 \u89e6\u53d1 aicore \u5f02\u5e38\uff0c\u975e HBM OOM"
+  }
+}

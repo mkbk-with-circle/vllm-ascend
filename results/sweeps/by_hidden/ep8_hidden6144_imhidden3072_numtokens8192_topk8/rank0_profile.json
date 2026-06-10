@@ -1,0 +1,141 @@
+{
+  "magic": 1146111555,
+  "version": 7,
+  "phases": {
+    "prep": {
+      "begin_us": 0,
+      "duration_us": 1045,
+      "end_us": 1045
+    },
+    "dispatch": {
+      "begin_us": 1045,
+      "duration_us": 3966,
+      "end_us": 5011
+    },
+    "swiglu": {
+      "begin_us": 12700,
+      "duration_us": 10990,
+      "end_us": 23690
+    },
+    "combine": {
+      "begin_us": 32833,
+      "duration_us": 4256,
+      "end_us": 37089
+    },
+    "gmm1": {
+      "begin_us": 2951,
+      "duration_us": 19603,
+      "end_us": 22554
+    },
+    "gmm2": {
+      "begin_us": 23690,
+      "duration_us": 9143,
+      "end_us": 32833
+    },
+    "swiglu_w1": {
+      "begin_us": 12364,
+      "duration_us": 1305,
+      "end_us": 13669
+    },
+    "swiglu_w2": {
+      "begin_us": 21811,
+      "duration_us": 1130,
+      "end_us": 22941
+    }
+  },
+  "rank": 0,
+  "case": "ep8_hidden6144_imhidden3072_numtokens8192_topk8",
+  "ep": 8,
+  "expert_token_nums": [
+    32649,
+    32993
+  ],
+  "case_params": {
+    "m": 8192,
+    "k": 6144,
+    "n": 6144,
+    "imhidden": 3072,
+    "e": 2,
+    "topk": 8,
+    "ep": 8,
+    "max_output_size": 78644
+  },
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  },
+  "n_valid_iters": {
+    "prep": 50,
+    "dispatch": 50,
+    "swiglu": 50,
+    "combine": 50,
+    "gmm1": 50,
+    "gmm2": 50
+  },
+  "raw": [
+    1146111555,
+    7,
+    837277565,
+    0,
+    1002,
+    1003,
+    3971,
+    12700,
+    10990,
+    27734,
+    4301,
+    2951,
+    19603,
+    23690,
+    9143,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    23690,
+    8360,
+    8361,
+    8362,
+    8363,
+    8368,
+    8369,
+    8372,
+    8374,
+    9007,
+    9009,
+    9134,
+    9137,
+    9138,
+    9140,
+    9141,
+    9142,
+    8356,
+    8358,
+    8358,
+    8361,
+    2951,
+    22554,
+    32833,
+    12700,
+    14018,
+    22559,
+    23690
+  ]
+}

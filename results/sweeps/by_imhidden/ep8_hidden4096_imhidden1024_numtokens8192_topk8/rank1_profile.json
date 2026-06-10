@@ -1,0 +1,141 @@
+{
+  "magic": 1146111555,
+  "version": 7,
+  "phases": {
+    "prep": {
+      "begin_us": 0,
+      "duration_us": 760,
+      "end_us": 760
+    },
+    "dispatch": {
+      "begin_us": 761,
+      "duration_us": 3579,
+      "end_us": 4340
+    },
+    "swiglu": {
+      "begin_us": 4349,
+      "duration_us": 2493,
+      "end_us": 6842
+    },
+    "combine": {
+      "begin_us": 10250,
+      "duration_us": 3942,
+      "end_us": 14192
+    },
+    "gmm1": {
+      "begin_us": 2317,
+      "duration_us": 3819,
+      "end_us": 6136
+    },
+    "gmm2": {
+      "begin_us": 6843,
+      "duration_us": 3167,
+      "end_us": 10010
+    },
+    "swiglu_w1": {
+      "begin_us": 4555,
+      "duration_us": 764,
+      "end_us": 5319
+    },
+    "swiglu_w2": {
+      "begin_us": 6376,
+      "duration_us": 703,
+      "end_us": 7079
+    }
+  },
+  "rank": 1,
+  "case": "sweep_imhidden_1024",
+  "ep": 8,
+  "expert_token_nums": [
+    32400,
+    33119
+  ],
+  "case_params": {
+    "m": 8192,
+    "k": 4096,
+    "n": 2048,
+    "imhidden": 1024,
+    "e": 2,
+    "topk": 8,
+    "ep": 8,
+    "max_output_size": 78644
+  },
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  },
+  "n_valid_iters": {
+    "prep": 50,
+    "dispatch": 50,
+    "swiglu": 50,
+    "combine": 50,
+    "gmm1": 50,
+    "gmm2": 50
+  },
+  "raw": [
+    1146111555,
+    7,
+    652224718,
+    0,
+    586,
+    586,
+    3571,
+    4349,
+    2493,
+    8266,
+    3962,
+    2317,
+    3819,
+    6843,
+    3167,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    6843,
+    2871,
+    0,
+    2873,
+    2954,
+    2954,
+    3167,
+    3166,
+    3164,
+    3156,
+    3140,
+    3139,
+    2864,
+    2869,
+    0,
+    2869,
+    0,
+    0,
+    2871,
+    0,
+    0,
+    2317,
+    6136,
+    10010,
+    4349,
+    5110,
+    6140,
+    6842
+  ]
+}

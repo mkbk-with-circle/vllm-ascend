@@ -1,0 +1,14 @@
+{
+  "name": "oom_probe_m49152",
+  "m": 49152,
+  "k": 6144,
+  "n": 6144,
+  "e": 2,
+  "topk": 8,
+  "max_output_size": 471860,
+  "imhidden": 3072,
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  }
+}

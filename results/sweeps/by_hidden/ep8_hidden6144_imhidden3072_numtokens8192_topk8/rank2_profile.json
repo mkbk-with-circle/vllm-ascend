@@ -1,0 +1,141 @@
+{
+  "magic": 1146111555,
+  "version": 7,
+  "phases": {
+    "prep": {
+      "begin_us": 0,
+      "duration_us": 989,
+      "end_us": 989
+    },
+    "dispatch": {
+      "begin_us": 990,
+      "duration_us": 3967,
+      "end_us": 4957
+    },
+    "swiglu": {
+      "begin_us": 13324,
+      "duration_us": 10509,
+      "end_us": 23833
+    },
+    "combine": {
+      "begin_us": 32925,
+      "duration_us": 5978,
+      "end_us": 38903
+    },
+    "gmm1": {
+      "begin_us": 3126,
+      "duration_us": 19584,
+      "end_us": 22710
+    },
+    "gmm2": {
+      "begin_us": 23833,
+      "duration_us": 9092,
+      "end_us": 32925
+    },
+    "swiglu_w1": {
+      "begin_us": 12543,
+      "duration_us": 1312,
+      "end_us": 13855
+    },
+    "swiglu_w2": {
+      "begin_us": 21730,
+      "duration_us": 1119,
+      "end_us": 22849
+    }
+  },
+  "rank": 2,
+  "case": "ep8_hidden6144_imhidden3072_numtokens8192_topk8",
+  "ep": 8,
+  "expert_token_nums": [
+    32962,
+    32632
+  ],
+  "case_params": {
+    "m": 8192,
+    "k": 6144,
+    "n": 6144,
+    "imhidden": 3072,
+    "e": 2,
+    "topk": 8,
+    "ep": 8,
+    "max_output_size": 78644
+  },
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  },
+  "n_valid_iters": {
+    "prep": 50,
+    "dispatch": 50,
+    "swiglu": 50,
+    "combine": 50,
+    "gmm1": 50,
+    "gmm2": 50
+  },
+  "raw": [
+    1146111555,
+    7,
+    838577722,
+    0,
+    1140,
+    1141,
+    3993,
+    13324,
+    10509,
+    27899,
+    6073,
+    3126,
+    19584,
+    23833,
+    9092,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    23833,
+    8333,
+    8334,
+    8337,
+    8338,
+    8340,
+    8340,
+    8353,
+    8355,
+    8356,
+    8358,
+    9083,
+    9085,
+    8949,
+    8951,
+    9088,
+    9088,
+    9090,
+    9091,
+    8337,
+    8338,
+    3126,
+    22710,
+    32925,
+    13324,
+    14631,
+    22715,
+    23833
+  ]
+}

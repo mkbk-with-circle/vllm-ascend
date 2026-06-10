@@ -1,0 +1,93 @@
+{
+  "axis": "imhidden",
+  "fixed": {
+    "m": 8192,
+    "k": 4096,
+    "topk": 8,
+    "e": 2
+  },
+  "values": [
+    1024,
+    2048,
+    3072,
+    4096
+  ],
+  "ep": 8,
+  "cases": [
+    {
+      "case_name": "sweep_imhidden_1024",
+      "slug": "ep8_hidden4096_imhidden1024_numtokens8192_topk8",
+      "path": "results/dffc/sweeps/by_imhidden/ep8_hidden4096_imhidden1024_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_imhidden_1024",
+        "m": 8192,
+        "k": 4096,
+        "n": 2048,
+        "e": 2,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 1024
+      },
+      "sweep_value": 1024,
+      "bandwidth": {
+        "dispatch_gbps_job": 603.5306369213608,
+        "combine_gbps_job": 775.4048196425347,
+        "dispatch_gbps_per_rank_median": 76.1139957818345,
+        "combine_gbps_per_rank_median": 98.01174711425818
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_imhidden_2048",
+      "slug": "ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "path": "results/dffc/sweeps/by_imhidden/ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_imhidden_2048",
+        "m": 8192,
+        "k": 4096,
+        "n": 4096,
+        "e": 2,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 2048
+      },
+      "sweep_value": 2048,
+      "bandwidth": {
+        "dispatch_gbps_job": 608.9647900956669,
+        "combine_gbps_job": 776.8072519442937,
+        "dispatch_gbps_per_rank_median": 76.59411280130203,
+        "combine_gbps_per_rank_median": 97.82094819159128
+      },
+      "status": "ok"
+    },
+    {
+      "case_name": "sweep_imhidden_3072",
+      "slug": "ep8_hidden4096_imhidden3072_numtokens8192_topk8",
+      "path": "results/dffc/sweeps/by_imhidden/ep8_hidden4096_imhidden3072_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_imhidden_3072",
+        "m": 8192,
+        "k": 4096,
+        "n": 6144,
+        "e": 2,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 3072
+      },
+      "sweep_value": 3072,
+      "bandwidth": {
+        "dispatch_gbps_job": 601.6849774812343,
+        "combine_gbps_job": 773.8679812612613,
+        "dispatch_gbps_per_rank_median": 76.40977043630028,
+        "combine_gbps_per_rank_median": 98.32198623669854
+      },
+      "status": "ok"
+    }
+  ],
+  "failures": [
+    {
+      "slug": "ep8_hidden4096_imhidden4096_numtokens8192_topk8",
+      "error": "\n\n-- Process 5 terminated with the following error:\nTraceback (most recent call last):\n  File \"/home/u2200013153/vllm-ascend/.dffc_profile/miniconda3/envs/dffc311/lib/python3.11/site-packages/torch/multiprocessing/spawn.py\", line 87, in _wrap\n    fn(i, *args)\n  File \"/home/u2200013153/vllm-ascend/tools/dffc_profile/run_case.py\", line 134, in _worker\n    torch.npu.synchronize()\n  File \"/home/u2200013153/vllm-ascend/.dffc_profile/miniconda3/envs/dffc311/lib/python3.11/site-packages/torch_npu/npu/utils.py\", line 72, in synchronize\n    return torch_npu._C._npu_synchronize()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: npuSynchronizeDevice:../torch_npu/csrc/core/npu/NPUStream.cpp:576 NPU function error: AclrtSynchronizeDeviceWithTimeout, error code is 507015\n[ERROR] 2026-06-08-11:40:01 (PID:3203276, Device:5, RankID:-1) ERR00100 PTA call acl api failed\n[Error]: The aicore execution is abnormal. \n        Rectify the fault based on the error information in the ascend log.\nEZ9999: Inner Error!\nEZ9999[PID: 3203276] 2026-06-08-11:39:59.406.867 (EZ9999):  The error from device(chipId:2, dieId:1), serial number is 4, there is an exception of fftsplus aivector error, core id is 0, error code = 0, dump info: pc start: 0x12c093008a14, current: 0x12c09302d228, vec error info: 0x5711979238, mte error info: 0x1a68f1b950, ifu error info: 0x6e9ee29031c40, ccu error info: 0xc8c072bd5a00007f, cube error info: 0, biu error info: 0, aic error mask: 0x6500020bd00028c, para base: 0x12c100001080.[FUNC:PrintCoreInfo][FILE:device_error_core_proc.cc][LINE:645]\n        TraceBack (most recent call last):\n       The extend info: errcode:(0, 0x200000000000000, 0) errorStr: The MPU address access is invalid. fixp_error0 info: 0x8f1b950, fixp_error1 info: 0x1a, fsmId:0, tslot:0, thread:0, ctxid:0, blk:3, sublk:0, subErrType:4.[FUNC:PrintCoreInfo][FILE:device_error_core_proc.cc][LINE:658]\n       Kernel task happen error, retCode=0x26, [aicore exception].[FUNC:PreCheckTaskErr][FILE:davinci_kernel_task.cc][LINE:1729]\n       rtDeviceSynchronizeWithTimeout execution failed, reason=aicore exception[FUNC:FuncErrorReason][FILE:error_message_manage.cc][LINE:65]\n       wait for compute device to finish failed, runtime result = 507015.[FUNC:ReportCallError][FILE:log_inner.cpp][LINE:148]\n\n"
+    }
+  ]
+}

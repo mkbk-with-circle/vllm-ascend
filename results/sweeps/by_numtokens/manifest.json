@@ -1,0 +1,106 @@
+{
+  "axis": "numtokens",
+  "fixed": {
+    "k": 4096,
+    "n": 4096,
+    "topk": 8,
+    "e": 2
+  },
+  "values": [
+    1024,
+    4096,
+    8192,
+    16384
+  ],
+  "ep": 8,
+  "cases": [
+    {
+      "case_name": "sweep_numtokens_1024",
+      "slug": "ep8_hidden4096_imhidden2048_numtokens1024_topk8",
+      "path": "results/dffc/sweeps/by_numtokens/ep8_hidden4096_imhidden2048_numtokens1024_topk8",
+      "params": {
+        "name": "sweep_numtokens_1024",
+        "m": 1024,
+        "k": 4096,
+        "n": 4096,
+        "e": 2,
+        "topk": 8,
+        "max_output_size": 16384,
+        "imhidden": 2048
+      },
+      "sweep_value": 1024,
+      "bandwidth": {
+        "dispatch_gbps_job": 659.8356292682927,
+        "combine_gbps_job": 762.6007272727273,
+        "dispatch_gbps_per_rank_median": 84.57229865061348,
+        "combine_gbps_per_rank_median": 97.19350212067945
+      }
+    },
+    {
+      "case_name": "sweep_numtokens_4096",
+      "slug": "ep8_hidden4096_imhidden2048_numtokens4096_topk8",
+      "path": "results/dffc/sweeps/by_numtokens/ep8_hidden4096_imhidden2048_numtokens4096_topk8",
+      "params": {
+        "name": "sweep_numtokens_4096",
+        "m": 4096,
+        "k": 4096,
+        "n": 4096,
+        "e": 2,
+        "topk": 8,
+        "max_output_size": 39322,
+        "imhidden": 2048
+      },
+      "sweep_value": 4096,
+      "bandwidth": {
+        "dispatch_gbps_job": 610.3386531302876,
+        "combine_gbps_job": 776.3859898770788,
+        "dispatch_gbps_per_rank_median": 77.20494167308121,
+        "combine_gbps_per_rank_median": 97.58063949608604
+      }
+    },
+    {
+      "case_name": "sweep_numtokens_8192",
+      "slug": "ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "path": "results/dffc/sweeps/by_numtokens/ep8_hidden4096_imhidden2048_numtokens8192_topk8",
+      "params": {
+        "name": "sweep_numtokens_8192",
+        "m": 8192,
+        "k": 4096,
+        "n": 4096,
+        "e": 2,
+        "topk": 8,
+        "max_output_size": 78644,
+        "imhidden": 2048
+      },
+      "sweep_value": 8192,
+      "bandwidth": {
+        "dispatch_gbps_job": 609.479263306111,
+        "combine_gbps_job": 777.22897140789,
+        "dispatch_gbps_per_rank_median": 76.64283815074991,
+        "combine_gbps_per_rank_median": 97.86551940063853
+      }
+    },
+    {
+      "case_name": "sweep_numtokens_16384",
+      "slug": "ep8_hidden4096_imhidden2048_numtokens16384_topk8",
+      "path": "results/dffc/sweeps/by_numtokens/ep8_hidden4096_imhidden2048_numtokens16384_topk8",
+      "params": {
+        "name": "sweep_numtokens_16384",
+        "m": 16384,
+        "k": 4096,
+        "n": 4096,
+        "e": 2,
+        "topk": 8,
+        "max_output_size": 157287,
+        "imhidden": 2048
+      },
+      "sweep_value": 16384,
+      "bandwidth": {
+        "dispatch_gbps_job": 610.4247254265971,
+        "combine_gbps_job": 780.05217871413,
+        "dispatch_gbps_per_rank_median": 76.63199615577932,
+        "combine_gbps_per_rank_median": 98.00493008820413
+      }
+    }
+  ]
+}

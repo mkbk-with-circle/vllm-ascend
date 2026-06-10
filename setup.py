@@ -219,6 +219,9 @@ class build_and_install_aclnn(Command):
         pass
 
     def run(self):
+        if os.environ.get("DFFC_SKIP_BUILD_ACLNN", "").strip().lower() in ("1", "on", "true", "yes"):
+            print("DFFC_SKIP_BUILD_ACLNN=1, skip build_aclnn.sh (use tools/dffc_profile/rebuild_mc2.sh)")
+            return
         try:
             print("Running bash build_aclnn.sh ...")
             subprocess.check_call(["bash", "csrc/build_aclnn.sh", ROOT_DIR, envs.SOC_VERSION])

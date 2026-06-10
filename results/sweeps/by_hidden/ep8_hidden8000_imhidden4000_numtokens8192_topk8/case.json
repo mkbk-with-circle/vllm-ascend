@@ -1,0 +1,14 @@
+{
+  "name": "sweep_hidden_8000",
+  "m": 8192,
+  "k": 8000,
+  "n": 8000,
+  "e": 2,
+  "topk": 8,
+  "max_output_size": 78644,
+  "imhidden": 4000,
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  }
+}

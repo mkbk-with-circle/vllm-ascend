@@ -1,0 +1,141 @@
+{
+  "magic": 1146111555,
+  "version": 7,
+  "phases": {
+    "prep": {
+      "begin_us": 0,
+      "duration_us": 1600,
+      "end_us": 1600
+    },
+    "dispatch": {
+      "begin_us": 1600,
+      "duration_us": 7082,
+      "end_us": 8682
+    },
+    "swiglu": {
+      "begin_us": 13101,
+      "duration_us": 9269,
+      "end_us": 22370
+    },
+    "combine": {
+      "begin_us": 31625,
+      "duration_us": 8288,
+      "end_us": 39913
+    },
+    "gmm1": {
+      "begin_us": 5351,
+      "duration_us": 15194,
+      "end_us": 20545
+    },
+    "gmm2": {
+      "begin_us": 22370,
+      "duration_us": 9255,
+      "end_us": 31625
+    },
+    "swiglu_w1": {
+      "begin_us": 12898,
+      "duration_us": 2091,
+      "end_us": 14989
+    },
+    "swiglu_w2": {
+      "begin_us": 20443,
+      "duration_us": 1821,
+      "end_us": 22264
+    }
+  },
+  "rank": 0,
+  "case": "sweep_numtokens_16384",
+  "ep": 8,
+  "expert_token_nums": [
+    65688,
+    65615
+  ],
+  "case_params": {
+    "m": 16384,
+    "k": 4096,
+    "n": 4096,
+    "imhidden": 2048,
+    "e": 2,
+    "topk": 8,
+    "ep": 8,
+    "max_output_size": 157287
+  },
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  },
+  "n_valid_iters": {
+    "prep": 50,
+    "dispatch": 50,
+    "swiglu": 50,
+    "combine": 50,
+    "gmm1": 50,
+    "gmm2": 50
+  },
+  "raw": [
+    1146111555,
+    7,
+    1575267611,
+    0,
+    1871,
+    1871,
+    7101,
+    13101,
+    9269,
+    26193,
+    8320,
+    5351,
+    15194,
+    22370,
+    9255,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    22370,
+    7735,
+    8995,
+    8995,
+    9237,
+    9245,
+    9249,
+    9254,
+    9253,
+    9246,
+    7710,
+    0,
+    7708,
+    7699,
+    7699,
+    0,
+    7700,
+    7702,
+    7706,
+    7711,
+    7729,
+    5351,
+    20545,
+    31625,
+    13101,
+    15179,
+    20549,
+    22370
+  ]
+}

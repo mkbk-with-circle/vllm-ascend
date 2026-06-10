@@ -1,0 +1,14 @@
+{
+  "name": "sweep_numtokens_16384",
+  "m": 16384,
+  "k": 4096,
+  "n": 4096,
+  "e": 2,
+  "topk": 8,
+  "max_output_size": 157287,
+  "imhidden": 2048,
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  }
+}

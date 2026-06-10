@@ -1,0 +1,14 @@
+{
+  "name": "sweep_topk_4",
+  "m": 8192,
+  "k": 4096,
+  "n": 4096,
+  "e": 2,
+  "topk": 4,
+  "max_output_size": 39322,
+  "imhidden": 2048,
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  }
+}

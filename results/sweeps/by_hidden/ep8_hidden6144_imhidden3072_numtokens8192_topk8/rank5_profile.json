@@ -1,0 +1,141 @@
+{
+  "magic": 1146111555,
+  "version": 7,
+  "phases": {
+    "prep": {
+      "begin_us": 0,
+      "duration_us": 1015,
+      "end_us": 1015
+    },
+    "dispatch": {
+      "begin_us": 1015,
+      "duration_us": 3958,
+      "end_us": 4973
+    },
+    "swiglu": {
+      "begin_us": 12852,
+      "duration_us": 10364,
+      "end_us": 23216
+    },
+    "combine": {
+      "begin_us": 32433,
+      "duration_us": 6008,
+      "end_us": 38441
+    },
+    "gmm1": {
+      "begin_us": 3124,
+      "duration_us": 18973,
+      "end_us": 22097
+    },
+    "gmm2": {
+      "begin_us": 23216,
+      "duration_us": 9217,
+      "end_us": 32433
+    },
+    "swiglu_w1": {
+      "begin_us": 12459,
+      "duration_us": 1302,
+      "end_us": 13761
+    },
+    "swiglu_w2": {
+      "begin_us": 21568,
+      "duration_us": 1113,
+      "end_us": 22681
+    }
+  },
+  "rank": 5,
+  "case": "ep8_hidden6144_imhidden3072_numtokens8192_topk8",
+  "ep": 8,
+  "expert_token_nums": [
+    32826,
+    32486
+  ],
+  "case_params": {
+    "m": 8192,
+    "k": 6144,
+    "n": 6144,
+    "imhidden": 3072,
+    "e": 2,
+    "topk": 8,
+    "ep": 8,
+    "max_output_size": 78644
+  },
+  "profile_iters": {
+    "warmup": 10,
+    "measure": 50
+  },
+  "n_valid_iters": {
+    "prep": 50,
+    "dispatch": 50,
+    "swiglu": 50,
+    "combine": 50,
+    "gmm1": 50,
+    "gmm2": 50
+  },
+  "raw": [
+    1146111555,
+    7,
+    844604125,
+    0,
+    1158,
+    1158,
+    3946,
+    12852,
+    10364,
+    27271,
+    6095,
+    3124,
+    18973,
+    23216,
+    9217,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    23216,
+    8343,
+    8344,
+    9030,
+    9031,
+    9012,
+    9013,
+    8787,
+    8787,
+    9216,
+    9216,
+    8327,
+    8328,
+    8329,
+    8330,
+    8332,
+    8335,
+    8337,
+    8338,
+    8342,
+    8342,
+    3124,
+    22097,
+    32433,
+    12852,
+    14155,
+    22102,
+    23216
+  ]
+}
