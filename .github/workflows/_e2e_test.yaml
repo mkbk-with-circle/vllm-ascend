@@ -124,7 +124,7 @@ jobs:
           echo "CSRC_HASH=$CSRC_HASH" >> $GITHUB_OUTPUT
 
       - name: Cache vllm-ascend csrc
-        uses: runs-on/cache@v4
+        uses: runs-on/cache@v5
         with:
           path: |
             vllm_ascend/_cann_ops_custom
@@ -256,7 +256,7 @@ jobs:
           echo "CSRC_HASH=$CSRC_HASH" >> $GITHUB_OUTPUT
 
       - name: Cache vllm-ascend csrc
-        uses: runs-on/cache@v4
+        uses: runs-on/cache@v5
         with:
           path: |
             vllm_ascend/_cann_ops_custom
@@ -395,7 +395,7 @@ jobs:
           echo "CSRC_HASH=$CSRC_HASH" >> $GITHUB_OUTPUT
 
       - name: Cache vllm-ascend csrc
-        uses: runs-on/cache@v4
+        uses: runs-on/cache@v5
         with:
           path: |
             vllm_ascend/_cann_ops_custom
@@ -525,7 +525,7 @@ jobs:
           echo "CSRC_HASH=$CSRC_HASH" >> $GITHUB_OUTPUT
 
       - name: Cache vllm-ascend csrc
-        uses: runs-on/cache@v4
+        uses: runs-on/cache@v5
         with:
           path: |
             vllm_ascend/_cann_ops_custom
@@ -692,7 +692,7 @@ jobs:
           echo "CSRC_HASH=$CSRC_HASH" >> $GITHUB_OUTPUT
 
       - name: Cache vllm-ascend csrc
-        uses: runs-on/cache@v4
+        uses: runs-on/cache@v5
         with:
           path: |
             vllm_ascend/_cann_ops_custom
@@ -841,7 +841,7 @@ jobs:
           echo "CSRC_HASH=$CSRC_HASH" >> $GITHUB_OUTPUT
 
       - name: Cache vllm-ascend csrc
-        uses: runs-on/cache@v4
+        uses: runs-on/cache@v5
         with:
           path: |
             vllm_ascend/_cann_ops_custom
@@ -970,7 +970,7 @@ jobs:
           echo "CSRC_HASH=$CSRC_HASH" >> $GITHUB_OUTPUT
 
       - name: Cache vllm-ascend csrc
-        uses: runs-on/cache@v4
+        uses: runs-on/cache@v5
         with:
           path: |
             vllm_ascend/_cann_ops_custom
@@ -1082,7 +1082,7 @@ jobs:
           echo "CSRC_HASH=$CSRC_HASH" >> $GITHUB_OUTPUT
 
       - name: Cache vllm-ascend csrc
-        uses: runs-on/cache@v4
+        uses: runs-on/cache@v5
         with:
           path: |
             vllm_ascend/_cann_ops_custom
